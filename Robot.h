@@ -18,9 +18,10 @@ class Robot
         Plot _plot;
         Objet _objet;
         Position _position;
+        //EtatRobot& _etat;
 	public:
 	    Robot() {
-	                EtatRobot& _etat = EtatRobotAVide::getInstance();
+            //_etat = EtatRobotAVide::getInstance();
             _position = Position(1,1);
         }
 

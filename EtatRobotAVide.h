@@ -10,16 +10,14 @@ using namespace std;
 class EtatRobotAVide: public EtatRobotEnRoute
 {
 
-	public: EtatRobot avancer();
-
-	public: EtatRobot tourner();
-
-	public: EtatRobot rencontrerPlot();
+	private:
+	    EtatRobotAVide();
 
 	public:
-	    static EtatRobot& getInstance();
-
-	private: EtatRobotAVide();
+	    EtatRobot avancer();
+        EtatRobot tourner();
+        EtatRobot rencontrerPlot();
+        static EtatRobot& getInstance();
 };
 
 #endif

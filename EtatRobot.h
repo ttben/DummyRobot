@@ -8,30 +8,24 @@ using namespace std;
 #include <iostream>
 class EtatRobot
 {
-	public: EtatRobot avancer();
+	public:
+	    EtatRobot avancer();
+        EtatRobot tourner();
+        EtatRobot saisir();
+        EtatRobot poser();
+        EtatRobot peser();
+        EtatRobot rencontrerPlot();
+        EtatRobot evaluerPlot();
+        EtatRobot figer();
+        EtatRobot repartir();
+        void afficher();
 
-	public: EtatRobot tourner();
+        EtatRobot& operator= (const EtatRobot&) {}
 
-	public: EtatRobot saisir();
-
-	public: EtatRobot poser();
-
-	public: EtatRobot peser();
-
-	public: EtatRobot rencontrerPlot();
-
-	public: EtatRobot evaluerPlot();
-
-	public: EtatRobot figer();
-
-	public: EtatRobot repartir();
-
-	public: void afficher();
-
-        friend ostream& operator << (ostream& os, const EtatRobot& r)
-        {
-           return os << &r;
-        }
+    friend ostream& operator << (ostream& os, const EtatRobot& r)
+    {
+       return os << &r;
+    }
 };
 
 #endif
