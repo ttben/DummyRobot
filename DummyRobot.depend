@@ -1,0 +1,121 @@
+# depslib dependency file v1.0
+1415482107 source:c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\etatrobot.cpp
+	<exception>
+	"EtatRobot.h"
+	"Robot.h"
+
+1415484992 c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\etatrobot.h
+	<exception>
+	<string>
+	<iostream>
+
+1415480475 c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\robot.h
+	<exception>
+	<string>
+	"EtatRobotAVide.h"
+	"Plot.h"
+	"Objet.h"
+	"Position.h"
+
+1415460064 c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\plot.h
+
+1415460064 c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\objet.h
+
+1415480323 c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\position.h
+	<ostream>
+	<iostream>
+
+1415485384 source:c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\etatrobotavide.cpp
+	<exception>
+	"EtatRobotAVide.h"
+	"SingletonHandler.h"
+
+1415485395 c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\etatrobotavide.h
+	<exception>
+	"EtatRobot.h"
+	"EtatRobotEnRoute.h"
+
+1415482141 c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\etatrobotenroute.h
+	<exception>
+	"EtatRobot.h"
+
+1415460540 source:c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\etatrobotavidefaceplot.cpp
+	<exception>
+	"EtatRobotAVideFacePlot.h"
+	"EtatRobot.h"
+	"EtatRobotEnRoute.h"
+
+1415460540 c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\etatrobotavidefaceplot.h
+	<exception>
+	"EtatRobot.h"
+	"EtatRobotEnRoute.h"
+
+1415460064 source:c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\etatrobotencharge.cpp
+	<exception>
+	"EtatRobotEnCharge.h"
+	"EtatRobot.h"
+	"EtatRobotEnRoute.h"
+
+1415460064 c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\etatrobotencharge.h
+	<exception>
+	"EtatRobot.h"
+	"EtatRobotEnRoute.h"
+
+1415460064 source:c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\etatrobotenchargefaceplot.cpp
+	<exception>
+	"EtatRobotEnChargeFacePlot.h"
+	"EtatRobot.h"
+	"EtatRobotEnRoute.h"
+
+1415460064 c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\etatrobotenchargefaceplot.h
+	<exception>
+	"EtatRobot.h"
+	"EtatRobotEnRoute.h"
+
+1415481676 source:c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\etatrobotenroute.cpp
+	<exception>
+	"EtatRobotEnRoute.h"
+
+1415460675 source:c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\etatrobotfigé.cpp
+	<exception>
+	"EtatRobotFigé.h"
+	"EtatRobotEnRoute.h"
+	"EtatRobot.h"
+
+1415460690 c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\etatrobotfigé.h
+	<exception>
+	"EtatRobotEnRoute.h"
+	"EtatRobot.h"
+
+1415485415 source:c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\main.cpp
+	<iostream>
+	"Robot.h"
+	"SingletonHandler.h"
+
+1415460064 source:c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\objet.cpp
+	"Objet.h"
+	"Robot.h"
+
+1415460064 source:c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\plot.cpp
+	"Plot.h"
+	"Robot.h"
+
+1415480390 source:c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\position.cpp
+	"Position.h"
+	"Robot.h"
+
+1415479698 source:c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\robot.cpp
+	<exception>
+	"Robot.h"
+
+1415484671 source:c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\singletonhandler.cpp
+	<exception>
+	<map>
+	"SingletonHandler.h"
+
+1415485349 c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\singletonhandler.h
+	<exception>
+	<iostream>
+	<map>
+	"EtatRobot.h"
+

@@ -1,22 +1,13 @@
-#include <exception>
-
 using namespace std;
-
-#include <string>
-
 
 #ifndef __EtatRobot_h__
 #define __EtatRobot_h__
 
-// #include "Robot.h"
-
-class Robot;
-class EtatRobot;
-
+#include <exception>
+#include <string>
+#include <iostream>
 class EtatRobot
 {
-	public: Robot* _etat;
-
 	public: EtatRobot avancer();
 
 	public: EtatRobot tourner();
@@ -37,9 +28,10 @@ class EtatRobot
 
 	public: void afficher();
 
-	public: void getAttribute();
-
-	public: void setAttribute(string aAttribute);
+        friend ostream& operator << (ostream& os, const EtatRobot& r)
+        {
+           return os << &r;
+        }
 };
 
 #endif

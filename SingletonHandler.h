@@ -1,31 +1,53 @@
 #include <exception>
 using namespace std;
 
-#include <map>
+
 
 #ifndef __SingletonHandler_h__
 #define __SingletonHandler_h__
 
+#include <iostream>
+#include <map>
 #include "EtatRobot.h"
 
-class EtatRobot;
-class SingletonHandler;
 
 class SingletonHandler
 {
-	private: static map<string, EtatRobot> _singletons;
+	public:
 
-	public: static void ajouterSingleton(string aString_nom, string aEtatRobot_instance) {
-		throw "Not yet implemented";
-	}
+	    typedef map<string, EtatRobot*> MapSingleton;
+	    static MapSingleton _singletons;
 
-	public: static bool existe(string aString_nom) {
-		throw "Not yet implemented";
-	}
 
-	public: static EtatRobot recupererInstance(string aString_nom) {
-		throw "Not yet implemented";
-	}
+//	    static void ajouterSingleton(string nom, EtatRobot instance);
+//
+//        static bool existe(string nom);
+//
+//        static EtatRobot recupererInstance(string nom);
+
+	    static void ajouterSingleton(string nom, EtatRobot* instance) {
+	        dump_map(SingletonHandler::_singletons);
+            SingletonHandler::_singletons.insert(pair<string,EtatRobot*>(nom, instance));
+            dump_map(SingletonHandler::_singletons);
+        }
+
+        static bool existe(string nom) {
+
+
+            return SingletonHandler::_singletons.count(nom) != 0;
+        }
+
+        static EtatRobot* recupererInstance(string nom) {
+            return SingletonHandler::_singletons.at(nom);
+        }
+
+        static void dump_map(const map<string, EtatRobot*>& map) {
+            for ( std::map<string,EtatRobot*>::const_iterator it = map.begin(); it != map.end(); it++) {
+                cout << "Key: " << it->first << endl;
+                cout << "Values" << it->second << endl;
+            }
+    }
 };
+
 
 #endif

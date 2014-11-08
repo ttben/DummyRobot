@@ -1,6 +1,7 @@
 #include <exception>
 #include <string>
-#include "EtatRobot.h"
+//#include "EtatRobot.h"
+#include "EtatRobotAVide.h"
 #include "Plot.h"
 #include "Objet.h"
 #include "Position.h"
@@ -10,33 +11,40 @@ using namespace std;
 #ifndef __Robot_h__
 #define __Robot_h__
 
-
-
-class EtatRobot;
-class Plot;
-class Objet;
-class Position;
-class Robot;
-
 class Robot
 {
 	private:
 	    string _direction;
+        //EtatRobot _etat;
+        Plot _plot;
+        Objet _objet;
+        Position _position;
 	public:
-	    EtatRobot* _etat;
-        Plot* _plot;
-        Objet* _objet;
-        Position* _position;
-        void avancer(string x, string y);
+	    Robot() {
+           // _etat = EtatRobotAVide::getInstance();
+            _position = Position(1,1);
+        }
+
+        Position& GetPosition() {
+            return _position;
+        }
+
+        void avancer(int x, int y);
         void tourner(string d);
-        void saisir(string o);
+        void saisir(Objet o);
         void poser();
         int peser();
-        void rencontrerPlot(string p);
+        void rencontrerPlot(Plot p);
         int evaluerPlot();
         void figer();
         void repartir();
         void afficher();
+
+        friend ostream& operator << (ostream& os, const Robot& r)
+        {
+           os << r._position;
+           return os;
+        }
 };
 
 #endif

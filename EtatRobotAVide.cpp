@@ -2,8 +2,10 @@
 using namespace std;
 
 #include "EtatRobotAVide.h"
-#include "EtatRobot.h"
-#include "EtatRobotEnRoute.h"
+#include "SingletonHandler.h"
+EtatRobotAVide::EtatRobotAVide() {
+
+}
 
 EtatRobot EtatRobotAVide::avancer() {
 	throw "Not yet implemented";
@@ -17,10 +19,15 @@ EtatRobot EtatRobotAVide::rencontrerPlot() {
 	throw "Not yet implemented";
 }
 
-EtatRobotAVide EtatRobotAVide::getInstance() {
-	throw "Not yet implemented";
-}
+EtatRobot* EtatRobotAVide::getInstance() {
+	 if(SingletonHandler::existe("EtatRobotAVide")) {
+        return SingletonHandler::recupererInstance("EtatRobotAVide");
+	 }
 
-EtatRobotAVide::EtatRobotAVide() {
+    EtatRobot etat = EtatRobotAVide();
+
+	 SingletonHandler::ajouterSingleton("EtatRobotAVide", std::addressof(etat));
+
+	 return SingletonHandler::recupererInstance("EtatRobotAVide");
 }
 

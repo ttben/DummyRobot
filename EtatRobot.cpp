@@ -43,12 +43,3 @@ EtatRobot EtatRobot::repartir() {
 void EtatRobot::afficher() {
 	throw "Not yet implemented";
 }
-
-void EtatRobot::getAttribute() {
-	throw "Not yet implemented";
-}
-
-void EtatRobot::setAttribute(string aAttribute) {
-	throw "Not yet implemented";
-}
-

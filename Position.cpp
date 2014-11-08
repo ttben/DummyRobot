@@ -2,6 +2,14 @@
 #include "Position.h"
 #include "Robot.h"
 
+Position::Position(){
+}
+
+Position::Position(int x, int y) {
+    _x = x;
+    _y = y;
+}
+
 int Position::getX() {
 	return this->_x;
 }

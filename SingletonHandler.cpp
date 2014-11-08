@@ -1,8 +1,9 @@
 #include <exception>
 using namespace std;
-
+#include <map>
 #include "SingletonHandler.h"
-#include "EtatRobot.h"
+
+SingletonHandler::MapSingleton SingletonHandler::_singletons = { };
 
 
 

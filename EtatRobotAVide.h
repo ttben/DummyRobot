@@ -1,15 +1,11 @@
-#include <exception>
 using namespace std;
 
 #ifndef __EtatRobotAVide_h__
 #define __EtatRobotAVide_h__
 
+#include <exception>
 #include "EtatRobot.h"
 #include "EtatRobotEnRoute.h"
-
-// class EtatRobot;
-// class EtatRobotEnRoute;
-class EtatRobotAVide;
 
 class EtatRobotAVide: public EtatRobotEnRoute
 {
@@ -20,7 +16,8 @@ class EtatRobotAVide: public EtatRobotEnRoute
 
 	public: EtatRobot rencontrerPlot();
 
-	public: EtatRobotAVide getInstance();
+	public:
+	    static EtatRobot* getInstance();
 
 	private: EtatRobotAVide();
 };

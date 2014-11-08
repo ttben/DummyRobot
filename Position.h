@@ -1,25 +1,30 @@
-
+using namespace std;
 #ifndef __Position_h__
 #define __Position_h__
 
-// #include "Robot.h"
-
-class Robot;
-class Position;
+#include <ostream>
+#include <iostream>
 
 class Position
 {
-	private: int _x;
-	private: int _y;
-	public: Robot* _position;
 
-	public: int getX();
+	private:
+	    int _x;
+	    int _y;
 
-	public: void setX(int aX);
+	public:
+        Position();
+	    Position(int, int);
+	    int getX();
+        void setX(int aX);
+        int getY();
+        void setY(int aY);
 
-	public: int getY();
-
-	public: void setY(int aY);
+        friend ostream& operator << (ostream& os, const Position& p)
+        {
+           os << '[' << p._x << ',' << p._y << ']';
+           return os;
+        }
 };
 
 #endif
