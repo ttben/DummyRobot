@@ -1,5 +1,9 @@
 #include <exception>
+
 using namespace std;
+
+#include <string>
+
 
 #ifndef __EtatRobot_h__
 #define __EtatRobot_h__
@@ -11,7 +15,7 @@ class EtatRobot;
 
 class EtatRobot
 {
-	public: Robot* _état;
+	public: Robot* _etat;
 
 	public: EtatRobot avancer();
 
@@ -25,7 +29,7 @@ class EtatRobot
 
 	public: EtatRobot rencontrerPlot();
 
-	public: EtatRobot évaluerPlot();
+	public: EtatRobot evaluerPlot();
 
 	public: EtatRobot figer();
 

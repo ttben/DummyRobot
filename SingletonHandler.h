@@ -1,6 +1,8 @@
 #include <exception>
 using namespace std;
 
+#include <map>
+
 #ifndef __SingletonHandler_h__
 #define __SingletonHandler_h__
 
@@ -11,7 +13,7 @@ class SingletonHandler;
 
 class SingletonHandler
 {
-	private: static Map<String, EtatRobot> _singletons;
+	private: static map<string, EtatRobot> _singletons;
 
 	public: static void ajouterSingleton(string aString_nom, string aEtatRobot_instance) {
 		throw "Not yet implemented";
@@ -21,7 +23,7 @@ class SingletonHandler
 		throw "Not yet implemented";
 	}
 
-	public: static EtatRobot récupérerInstance(string aString_nom) {
+	public: static EtatRobot recupererInstance(string aString_nom) {
 		throw "Not yet implemented";
 	}
 };

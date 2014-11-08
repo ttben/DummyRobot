@@ -1,6 +1,8 @@
 #include <exception>
 using namespace std;
 
+#include <string>
+
 #ifndef __Robot_h__
 #define __Robot_h__
 
@@ -17,8 +19,8 @@ class Robot;
 
 class Robot
 {
-	private: String _direction;
-	public: EtatRobot* _état;
+	private: string _direction;
+	public: EtatRobot* _etat;
 	public: Plot* _plot;
 	public: Objet* _objet;
 	public: Position* _position;
@@ -35,7 +37,7 @@ class Robot
 
 	public: void rencontrerPlot(string aPlot_p);
 
-	public: int évaluerPlot();
+	public: int evaluerPlot();
 
 	public: void figer();
 

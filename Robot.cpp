@@ -31,7 +31,7 @@ void Robot::rencontrerPlot(string aPlot_p) {
 	throw "Not yet implemented";
 }
 
-int Robot::évaluerPlot() {
+int Robot::evaluerPlot() {
 	throw "Not yet implemented";
 }
 

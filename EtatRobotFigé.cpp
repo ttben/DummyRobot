@@ -5,18 +5,18 @@ using namespace std;
 #include "EtatRobotEnRoute.h"
 #include "EtatRobot.h"
 
-EtatRobot EtatRobotFigé::repartir() {
+EtatRobot EtatRobotFige::repartir() {
 	throw "Not yet implemented";
 }
 
-void EtatRobotFigé::setEtatPrécédent(EtatRobotEnRoute aÉtatPrécédent) {
+void EtatRobotFige::setEtatPrecedent(EtatRobotEnRoute aEtatPrecedent) {
 	throw "Not yet implemented";
 }
 
-EtatRobotFigé EtatRobotFigé::getInstance() {
+EtatRobotFige EtatRobotFige::getInstance() {
 	throw "Not yet implemented";
 }
 
-EtatRobotFigé::EtatRobotFigé() {
+EtatRobotFige::EtatRobotFige() {
 }
 

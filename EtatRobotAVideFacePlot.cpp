@@ -13,7 +13,7 @@ EtatRobot EtatRobotAVideFacePlot::saisir() {
 	throw "Not yet implemented";
 }
 
-EtatRobot EtatRobotAVideFacePlot::évaluerPlot() {
+EtatRobot EtatRobotAVideFacePlot::evaluerPlot() {
 	throw "Not yet implemented";
 }
 

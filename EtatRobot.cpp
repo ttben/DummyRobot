@@ -28,7 +28,7 @@ EtatRobot EtatRobot::rencontrerPlot() {
 	throw "Not yet implemented";
 }
 
-EtatRobot EtatRobot::évaluerPlot() {
+EtatRobot EtatRobot::evaluerPlot() {
 	throw "Not yet implemented";
 }
 

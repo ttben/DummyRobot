@@ -18,7 +18,7 @@ class EtatRobotAVideFacePlot: public EtatRobotEnRoute
 
 	public: EtatRobot saisir();
 
-	public: EtatRobot évaluerPlot();
+	public: EtatRobot evaluerPlot();
 
 	public: EtatRobotAVideFacePlot getInstance();
 
