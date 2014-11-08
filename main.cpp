@@ -8,6 +8,8 @@ int main()
 {
     Robot r;
 
+
+
     cout << "Hello world!" << endl;
     return 0;
 }

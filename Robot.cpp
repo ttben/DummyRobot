@@ -1,11 +1,8 @@
 #include <exception>
+#include "Robot.h"
+
 using namespace std;
 
-#include "Robot.h"
-#include "EtatRobot.h"
-#include "Plot.h"
-#include "Objet.h"
-#include "Position.h"
 
 void Robot::avancer(string aInt_x, string aInt_y) {
 	throw "Not yet implemented";

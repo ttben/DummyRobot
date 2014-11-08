@@ -1,8 +1,8 @@
 #include <exception>
-using namespace std;
-
 #include "EtatRobot.h"
 #include "Robot.h"
+
+using namespace std;
 
 EtatRobot EtatRobot::avancer() {
 	throw "Not yet implemented";
