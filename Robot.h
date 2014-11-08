@@ -15,13 +15,12 @@ class Robot
 {
 	private:
 	    string _direction;
-        //EtatRobot _etat;
         Plot _plot;
         Objet _objet;
         Position _position;
 	public:
 	    Robot() {
-           // _etat = EtatRobotAVide::getInstance();
+	                EtatRobot& _etat = EtatRobotAVide::getInstance();
             _position = Position(1,1);
         }
 

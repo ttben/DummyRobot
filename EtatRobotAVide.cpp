@@ -19,15 +19,15 @@ EtatRobot EtatRobotAVide::rencontrerPlot() {
 	throw "Not yet implemented";
 }
 
-EtatRobot* EtatRobotAVide::getInstance() {
-	 if(SingletonHandler::existe("EtatRobotAVide")) {
+EtatRobot& EtatRobotAVide::getInstance() {
+    if(SingletonHandler::existe("EtatRobotAVide")) {
         return SingletonHandler::recupererInstance("EtatRobotAVide");
-	 }
+    }
 
     EtatRobot etat = EtatRobotAVide();
 
-	 SingletonHandler::ajouterSingleton("EtatRobotAVide", std::addressof(etat));
+    SingletonHandler::ajouterSingleton("EtatRobotAVide", etat);
 
-	 return SingletonHandler::recupererInstance("EtatRobotAVide");
+    return SingletonHandler::recupererInstance("EtatRobotAVide");
 }
 
