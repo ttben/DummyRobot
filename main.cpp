@@ -25,6 +25,13 @@ int main()
     cout << r << endl;
     Plot p;
     r.rencontrerPlot(p);
+    try {
+        cout << "Tentative d'effectuer une action non autorisee ..." << endl;
+        r.repartir();
+    }
+    catch (char const* e) {
+        cout << "Erreur d'execution attendue, relevee" << endl;
+    }
     cout << r << endl;
     return 0;
 }
