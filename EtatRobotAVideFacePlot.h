@@ -1,4 +1,3 @@
-#include <exception>
 using namespace std;
 
 #ifndef __EtatRobotAVideFacePlot_h__
@@ -6,23 +5,18 @@ using namespace std;
 
 #include "EtatRobot.h"
 #include "EtatRobotEnRoute.h"
-
-// class EtatRobot;
-// class EtatRobotEnRoute;
-class EtatRobotAVideFacePlot;
+#include <exception>
 
 class EtatRobotAVideFacePlot: public EtatRobotEnRoute
 {
 
-	public: EtatRobot tourner();
-
-	public: EtatRobot saisir();
-
-	public: EtatRobot evaluerPlot();
-
-	public: EtatRobotAVideFacePlot getInstance();
-
-	private: EtatRobotAVideFacePlot();
+private:
+        EtatRobotAVideFacePlot();
+public:
+	    EtatRobot tourner();
+	    EtatRobot saisir();
+	    EtatRobot evaluerPlot();
+	    static EtatRobot* getInstance();
 };
 
 #endif

@@ -8,7 +8,11 @@ using namespace std;
 
 class EtatRobotEnRoute: public EtatRobot
 {
-	public: EtatRobot figer();
+	public:
+	    EtatRobot figer();
+		EtatRobot avancer(){};
+        EtatRobot tourner(){};
+        EtatRobot* rencontrerPlot();
 };
 
 #endif

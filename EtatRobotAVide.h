@@ -4,7 +4,7 @@ using namespace std;
 #define __EtatRobotAVide_h__
 
 #include <exception>
-#include "EtatRobot.h"
+#include "EtatRobotAVideFacePlot.h"
 #include "EtatRobotEnRoute.h"
 
 class EtatRobotAVide: public EtatRobotEnRoute
@@ -14,9 +14,9 @@ class EtatRobotAVide: public EtatRobotEnRoute
 	    EtatRobotAVide();
 
 	public:
-	    EtatRobot avancer();
-        EtatRobot tourner();
-        EtatRobot rencontrerPlot();
+	    EtatRobot avancer(){};
+        EtatRobot tourner(){};
+        EtatRobot* rencontrerPlot();
         static EtatRobot* getInstance();
 };
 

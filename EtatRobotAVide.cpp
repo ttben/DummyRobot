@@ -7,16 +7,9 @@ EtatRobotAVide::EtatRobotAVide() {
 
 }
 
-EtatRobot EtatRobotAVide::avancer() {
-	throw "Not yet implemented";
-}
-
-EtatRobot EtatRobotAVide::tourner() {
-	throw "Not yet implemented";
-}
-
-EtatRobot EtatRobotAVide::rencontrerPlot() {
-	throw "Not yet implemented";
+EtatRobot* EtatRobotAVide::rencontrerPlot() {
+    cout << "ETATROBOTAVIDE" << endl;
+    return EtatRobotAVideFacePlot::getInstance();
 }
 
 EtatRobot* EtatRobotAVide::getInstance() {
