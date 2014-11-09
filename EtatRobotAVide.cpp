@@ -22,6 +22,6 @@ EtatRobot* EtatRobotAVide::getInstance() {
 
     SingletonHandler::ajouterSingleton("EtatRobotAVide", &etat);
 
-    return &etat;
+    return SingletonHandler::recupererInstance("EtatRobotAVide");
 }
 

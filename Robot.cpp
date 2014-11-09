@@ -25,7 +25,8 @@ int Robot::peser() {
 }
 
 void Robot::rencontrerPlot(Plot p) {
-    _etat = _etat->rencontrerPlot();
+    cout << "ROBOT#RENCONTRERPLOT\t" << _etat << endl;
+    auto e = _etat->rencontrerPlot();
     _plot = p;
 }
 

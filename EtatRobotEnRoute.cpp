@@ -7,7 +7,3 @@ EtatRobot* EtatRobotEnRoute::figer() {
 	throw "Not yet implemented";
 }
 
-        EtatRobot* EtatRobotEnRoute::rencontrerPlot(){
-            throw "Not yet implemented";
-        }
-
