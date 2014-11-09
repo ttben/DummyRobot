@@ -9,13 +9,15 @@
 	<string>
 	<iostream>
 
-1415491115 c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\robot.h
+1415519349 c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\robot.h
 	<exception>
 	<string>
 	"EtatRobotAVide.h"
 	"Plot.h"
 	"Objet.h"
 	"Position.h"
+	<iostream>
+	"SingletonHandler.h"
 
 1415460064 c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\plot.h
 
@@ -25,12 +27,12 @@
 	<ostream>
 	<iostream>
 
-1415490226 source:c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\etatrobotavide.cpp
+1415519593 source:c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\etatrobotavide.cpp
 	<exception>
 	"EtatRobotAVide.h"
 	"SingletonHandler.h"
 
-1415490785 c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\etatrobotavide.h
+1415519098 c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\etatrobotavide.h
 	<exception>
 	"EtatRobot.h"
 	"EtatRobotEnRoute.h"
@@ -87,7 +89,7 @@
 	"EtatRobotEnRoute.h"
 	"EtatRobot.h"
 
-1415490498 source:c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\main.cpp
+1415519534 source:c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\main.cpp
 	<iostream>
 	"Robot.h"
 	"SingletonHandler.h"
@@ -113,7 +115,7 @@
 	<map>
 	"SingletonHandler.h"
 
-1415490170 c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\singletonhandler.h
+1415519195 c:\users\banji_000\documents\dummyrobot\dummyrobot\dummyrobot\singletonhandler.h
 	<exception>
 	<iostream>
 	<map>

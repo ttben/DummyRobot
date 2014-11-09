@@ -17,7 +17,7 @@ class EtatRobotAVide: public EtatRobotEnRoute
 	    EtatRobot avancer();
         EtatRobot tourner();
         EtatRobot rencontrerPlot();
-        static EtatRobot& getInstance();
+        static EtatRobot* getInstance();
 };
 
 #endif

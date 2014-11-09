@@ -5,7 +5,8 @@
 #include "Plot.h"
 #include "Objet.h"
 #include "Position.h"
-
+#include <iostream>
+#include "SingletonHandler.h"
 using namespace std;
 
 #ifndef __Robot_h__
@@ -18,10 +19,11 @@ class Robot
         Plot _plot;
         Objet _objet;
         Position _position;
-        //EtatRobot& _etat;
+        EtatRobot* _etat;
 	public:
 	    Robot() {
-            //_etat = EtatRobotAVide::getInstance();
+            _etat = (EtatRobotAVide::getInstance());
+            cout << "@Robot#etat : " << _etat <<"@SingleHandler#etat : " << SingletonHandler::recupererInstance("EtatRobotAVide") << endl;
             _position = Position(1,1);
         }
 
@@ -42,7 +44,7 @@ class Robot
 
         friend ostream& operator << (ostream& os, const Robot& r)
         {
-           os << r._position;
+           os << r._position << "Etat : " << r._etat;
            return os;
         }
 };

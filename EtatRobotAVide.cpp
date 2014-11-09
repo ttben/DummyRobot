@@ -19,15 +19,16 @@ EtatRobot EtatRobotAVide::rencontrerPlot() {
 	throw "Not yet implemented";
 }
 
-EtatRobot& EtatRobotAVide::getInstance() {
+EtatRobot* EtatRobotAVide::getInstance() {
     if(SingletonHandler::existe("EtatRobotAVide")) {
+        cout << "Le singleton EtatRobotAVide existe deja à @" <<SingletonHandler::recupererInstance("EtatRobotAVide") << endl;
         return SingletonHandler::recupererInstance("EtatRobotAVide");
     }
 
     EtatRobot etat = EtatRobotAVide();
 
-    SingletonHandler::ajouterSingleton("EtatRobotAVide", etat);
+    SingletonHandler::ajouterSingleton("EtatRobotAVide", &etat);
 
-    return SingletonHandler::recupererInstance("EtatRobotAVide");
+    return &etat;
 }
 
