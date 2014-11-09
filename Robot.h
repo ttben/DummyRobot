@@ -1,3 +1,9 @@
+
+using namespace std;
+
+#ifndef __Robot_h__
+#define __Robot_h__
+
 #include <exception>
 #include <string>
 //#include "EtatRobot.h"
@@ -7,10 +13,6 @@
 #include "Position.h"
 #include <iostream>
 #include "SingletonHandler.h"
-using namespace std;
-
-#ifndef __Robot_h__
-#define __Robot_h__
 
 class Robot
 {

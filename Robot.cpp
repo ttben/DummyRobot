@@ -27,9 +27,10 @@ int Robot::peser() {
 void Robot::rencontrerPlot(Plot p) {
     cout << "ROBOT#RENCONTRERPLOT\t" << _etat << endl;
     //TODO FIXME ::
-    EtatRobot* etmp = _etat->rencontrerPlot();
-    delete _etat;
-    _etat = etmp;
+    cout << _etat << endl;
+    (_etat)->rencontrerPlot();
+//    delete _etat;
+//    _etat = etmp;
     _plot = p;
 }
 

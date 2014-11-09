@@ -10,10 +10,14 @@ class EtatRobotEnRoute: public EtatRobot
 {
 	public:
 	    virtual EtatRobot* figer();
-		virtual EtatRobot* avancer(){};
-        virtual EtatRobot* tourner(){};
+		virtual EtatRobot* avancer() {
+		            throw "Not yet implemented";
+        };
+        virtual EtatRobot* tourner() {
+            throw "NOT YET IMPLEMENTED";
+        };
         virtual EtatRobot* rencontrerPlot(){
-            cout << "ETATROBOT"<< endl;
+            cout << "ETATROBOTENROUTE"<< endl;
             throw "Not yet implemented";
         }
 };

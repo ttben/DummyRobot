@@ -17,6 +17,7 @@ public:
 	    EtatRobot* saisir();
 	    EtatRobot* evaluerPlot();
 	    static EtatRobot* getInstance();
+
 };
 
 #endif
