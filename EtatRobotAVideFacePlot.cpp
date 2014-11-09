@@ -5,15 +5,15 @@ using namespace std;
 #include "SingletonHandler.h"
 #include <exception>
 
-EtatRobot EtatRobotAVideFacePlot::tourner() {
+EtatRobot* EtatRobotAVideFacePlot::tourner() {
 	throw "Not yet implemented";
 }
 
-EtatRobot EtatRobotAVideFacePlot::saisir() {
+EtatRobot* EtatRobotAVideFacePlot::saisir() {
 	throw "Not yet implemented";
 }
 
-EtatRobot EtatRobotAVideFacePlot::evaluerPlot() {
+EtatRobot* EtatRobotAVideFacePlot::evaluerPlot() {
 	throw "Not yet implemented";
 }
 

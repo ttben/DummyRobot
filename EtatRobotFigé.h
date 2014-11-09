@@ -15,11 +15,11 @@ class EtatRobotFige: public EtatRobot
 {
 	private: EtatRobotEnRoute _etatPrecedent;
 
-	public: EtatRobot repartir();
+	public: EtatRobot* repartir();
 
 	public: void setEtatPrecedent(EtatRobotEnRoute aEtatPrecedent);
 
-	public: EtatRobotFige getInstance();
+	public: EtatRobot* getInstance();
 
 	private: EtatRobotFige();
 };

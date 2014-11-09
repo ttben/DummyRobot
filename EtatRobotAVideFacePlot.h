@@ -13,9 +13,9 @@ class EtatRobotAVideFacePlot: public EtatRobotEnRoute
 private:
         EtatRobotAVideFacePlot();
 public:
-	    EtatRobot tourner();
-	    EtatRobot saisir();
-	    EtatRobot evaluerPlot();
+	    EtatRobot* tourner();
+	    EtatRobot* saisir();
+	    EtatRobot* evaluerPlot();
 	    static EtatRobot* getInstance();
 };
 

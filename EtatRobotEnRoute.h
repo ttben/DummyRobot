@@ -9,10 +9,10 @@ using namespace std;
 class EtatRobotEnRoute: public EtatRobot
 {
 	public:
-	    EtatRobot figer();
-		EtatRobot avancer(){};
-        EtatRobot tourner(){};
-        EtatRobot* rencontrerPlot();
+	    virtual EtatRobot* figer();
+		virtual EtatRobot* avancer(){};
+        virtual EtatRobot* tourner(){};
+        virtual EtatRobot* rencontrerPlot();
 };
 
 #endif

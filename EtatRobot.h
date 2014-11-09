@@ -9,16 +9,46 @@ using namespace std;
 class EtatRobot
 {
 	public:
-	    EtatRobot* avancer();
-        EtatRobot* tourner();
-        EtatRobot* saisir();
-        EtatRobot* poser();
-        EtatRobot* peser();
-        EtatRobot* rencontrerPlot();
-        EtatRobot* evaluerPlot();
-        EtatRobot* figer();
-        EtatRobot* repartir();
-        void afficher();
+        virtual EtatRobot* avancer() {
+            throw "Not yet implemented";
+        }
+
+        virtual EtatRobot* tourner() {
+            throw "Not yet implemented";
+        }
+
+        virtual EtatRobot* saisir() {
+            throw "Not yet implemented";
+        }
+
+        virtual EtatRobot* poser() {
+            throw "Not yet implemented";
+        }
+
+        virtual EtatRobot* peser() {
+            throw "Not yet implemented";
+        }
+
+        virtual EtatRobot* rencontrerPlot() {
+            cout << "ETATROBOT"<< endl;
+            throw "Not yet implemented";
+        }
+
+        virtual EtatRobot* evaluerPlot() {
+            throw "Not yet implemented";
+        }
+
+        virtual EtatRobot* figer() {
+            throw "Not yet implemented";
+        }
+
+        virtual EtatRobot* repartir() {
+            throw "Not yet implemented";
+        }
+
+        virtual void afficher() {
+            throw "Not yet implemented";
+        }
 
         EtatRobot& operator= (const EtatRobot&) {}
 

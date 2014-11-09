@@ -14,15 +14,15 @@ class EtatRobotEnCharge;
 class EtatRobotEnCharge: public EtatRobotEnRoute
 {
 
-	public: EtatRobot avancer();
+	public: EtatRobot* avancer();
 
-	public: EtatRobot tourner();
+	public: EtatRobot* tourner();
 
-	public: EtatRobot peser();
+	public: EtatRobot* peser();
 
-	public: EtatRobot rencontrerPlot();
+	public: EtatRobot* rencontrerPlot();
 
-	public: EtatRobotEnCharge getInstance();
+	public: EtatRobot* getInstance();
 
 	private: EtatRobotEnCharge();
 };

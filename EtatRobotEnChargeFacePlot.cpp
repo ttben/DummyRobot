@@ -5,19 +5,19 @@ using namespace std;
 #include "EtatRobot.h"
 #include "EtatRobotEnRoute.h"
 
-EtatRobot EtatRobotEnChargeFacePlot::poser() {
+EtatRobot* EtatRobotEnChargeFacePlot::poser() {
 	throw "Not yet implemented";
 }
 
-EtatRobot EtatRobotEnChargeFacePlot::peser() {
+EtatRobot* EtatRobotEnChargeFacePlot::peser() {
 	throw "Not yet implemented";
 }
 
-EtatRobot EtatRobotEnChargeFacePlot::tourner() {
+EtatRobot* EtatRobotEnChargeFacePlot::tourner() {
 	throw "Not yet implemented";
 }
 
-EtatRobotEnChargeFacePlot EtatRobotEnChargeFacePlot::getInstance() {
+EtatRobot* EtatRobotEnChargeFacePlot::getInstance() {
 	throw "Not yet implemented";
 }
 

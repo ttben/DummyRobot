@@ -3,7 +3,11 @@ using namespace std;
 
 #include "EtatRobotEnRoute.h"
 
-EtatRobot EtatRobotEnRoute::figer() {
+EtatRobot* EtatRobotEnRoute::figer() {
 	throw "Not yet implemented";
 }
+
+        EtatRobot* EtatRobotEnRoute::rencontrerPlot(){
+            throw "Not yet implemented";
+        }
 
