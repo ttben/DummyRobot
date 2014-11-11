@@ -1,8 +1,9 @@
 
 #include "Objet.h"
-#include "Robot.h"
+
+Objet::Objet(){}
 
 int Objet::getPoids() {
-	return this->_poids;
+	return _poids;
 }
 

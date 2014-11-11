@@ -20,9 +20,8 @@ class Position
         int getY();
         void setY(int aY);
 
-        friend ostream& operator << (ostream& os, const Position& p)
-        {
-           os << '[' << p._x << ',' << p._y << ']';
+        friend ostream& operator << (ostream& os, const Position& p){
+           os << '[' << p._x << ';' << p._y << ']';
            return os;
         }
 };

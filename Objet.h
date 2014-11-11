@@ -1,18 +1,23 @@
-
+using namespace std;
 #ifndef __Objet_h__
 #define __Objet_h__
 
-// #include "Robot.h"
-
-class Robot;
-class Objet;
+#include <ostream>
+#include <iostream>
 
 class Objet
 {
-	private: int _poids;
-	public: Robot* _objet;
+	private:
+	int _poids;
 
-	public: int getPoids();
+	public:
+	Objet();
+	int getPoids();
+
+	friend ostream& operator << (ostream& os, const Objet& o){
+        os << "poids:" << o._poids;
+        return os;
+    }
 };
 
 #endif
