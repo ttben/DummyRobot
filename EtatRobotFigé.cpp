@@ -1,7 +1,7 @@
 #include <exception>
 using namespace std;
 
-#include "EtatRobotFigé.h"
+#include "EtatRobotFige.h"
 #include "EtatRobotEnRoute.h"
 #include "EtatRobot.h"
 
