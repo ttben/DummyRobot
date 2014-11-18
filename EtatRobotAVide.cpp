@@ -18,9 +18,9 @@ EtatRobot* EtatRobotAVide::getInstance() {
         return SingletonHandler::recupererInstance("EtatRobotAVide");
     }
 
-    EtatRobot etat = EtatRobotAVide();
+    EtatRobot* etat = new EtatRobotAVide;
 
-    SingletonHandler::ajouterSingleton("EtatRobotAVide", &etat);
+    SingletonHandler::ajouterSingleton("EtatRobotAVide", etat);
 
     return SingletonHandler::recupererInstance("EtatRobotAVide");
 }

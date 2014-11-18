@@ -23,9 +23,9 @@ EtatRobot* EtatRobotAVideFacePlot::getInstance() {
         return SingletonHandler::recupererInstance("EtatRobotAVideFacePlot");
     }
 
-    EtatRobot etat = EtatRobotAVideFacePlot();
+    EtatRobot* etat = new EtatRobotAVideFacePlot;
 
-    SingletonHandler::ajouterSingleton("EtatRobotAVideFacePlot", &etat);
+    SingletonHandler::ajouterSingleton("EtatRobotAVideFacePlot", etat);
 
     return SingletonHandler::recupererInstance("EtatRobotAVideFacePlot");
 }
