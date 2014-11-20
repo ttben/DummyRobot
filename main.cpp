@@ -19,8 +19,9 @@ int main()
     r.attach(&aL);
     r.attach(&aC);
 
-    Plot p;
-    Objet o;
+    Plot p(8);
+    Objet o(5);
+    cout << r << endl;
 
     r.rencontrerPlot(p);
     r.tourner("E");
@@ -40,6 +41,5 @@ int main()
     catch (EtatRobot::UnAuthorizedAction e) {
         cout << "\tErreur d'execution attendue, relevee ==> OK" << endl;
     }
-    cout << r << endl;
     return 0;
 }

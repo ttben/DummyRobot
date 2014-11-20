@@ -21,7 +21,6 @@ EtatRobot* EtatRobotAVideFacePlot::evaluerPlot() {
 
 EtatRobot* EtatRobotAVideFacePlot::getInstance() {
     if(SingletonHandler::existe("EtatRobotAVideFacePlot")) {
-        cout << "Le singleton EtatRobotAVideFacePlot existe deja à @" <<SingletonHandler::recupererInstance("EtatRobotAVideFacePlot") << endl;
         return SingletonHandler::recupererInstance("EtatRobotAVideFacePlot");
     }
 

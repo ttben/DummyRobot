@@ -20,7 +20,6 @@ EtatRobot* EtatRobotAVide::tourner(){
 
 EtatRobot* EtatRobotAVide::getInstance() {
     if(SingletonHandler::existe("EtatRobotAVide")) {
-        cout << "Le singleton EtatRobotAVide existe deja à @" <<SingletonHandler::recupererInstance("EtatRobotAVide") << endl;
         return SingletonHandler::recupererInstance("EtatRobotAVide");
     }
 

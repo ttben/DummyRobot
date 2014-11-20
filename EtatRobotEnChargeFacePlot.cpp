@@ -22,7 +22,6 @@ EtatRobot* EtatRobotEnChargeFacePlot::tourner() {
 
 EtatRobot* EtatRobotEnChargeFacePlot::getInstance() {
 	if(SingletonHandler::existe("EtatRobotEnChargeFacePlot")) {
-        cout << "Le singleton EtatRobotEnChargeFacePlot existe deja à @" <<SingletonHandler::recupererInstance("EtatRobotEnChargeFacePlot") << endl;
         return SingletonHandler::recupererInstance("EtatRobotEnChargeFacePlot");
     }
 

@@ -18,7 +18,6 @@ void EtatRobotFige::setEtatPrecedent(EtatRobotEnRoute aEtatPrecedent) {
 
 EtatRobot* EtatRobotFige::getInstance() {
 	if(SingletonHandler::existe("EtatRobotFige")) {
-        cout << "Le singleton EtatRobotFige existe deja à @" <<SingletonHandler::recupererInstance("EtatRobotFige") << endl;
         return SingletonHandler::recupererInstance("EtatRobotFige");
     }
 

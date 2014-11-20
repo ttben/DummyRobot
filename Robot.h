@@ -50,10 +50,17 @@ class Robot
         void notify();
         void attach(Observer* obs);
         void detach(Observer* obs);
+        string getDernierOrdre();
 
         friend ostream& operator << (ostream& os, const Robot& r)
         {
-           os << "Position : " << r._position << ", Etat : " << r._etat << ", Objet : " << r._objet << ", Plot : " << r._plot;
+           os << "Position : " << r._position << ", Etat : " << r._etat << ", Objet : ";
+           if(r._objet != NULL){os << *(r._objet);}
+           else {os << "aucun";}
+           os << ", Plot : ";
+           if(r._plot != NULL){os << *(r._plot);}
+           else{os << "aucun";}
+
            return os;
         }
 };

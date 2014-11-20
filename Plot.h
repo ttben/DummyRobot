@@ -12,10 +12,11 @@ class Plot
 
 	public:
     Plot();
+    Plot(int hauteur);
     int getHauteur();
 
     friend ostream& operator << (ostream& os, const Plot& p){
-        os << "hauteur:" << p._hauteur;
+        os << "hauteur=" << p._hauteur;
         return os;
     }
 };
