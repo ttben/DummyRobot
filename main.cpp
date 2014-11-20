@@ -29,7 +29,7 @@ int main()
         cout << "Tentative d'effectuer une action non autorisee ..." << endl;
         r.repartir();
     }
-    catch (char const* e) {
+    catch (EtatRobot::UnAuthorizedAction e) {
         cout << "Erreur d'execution attendue, relevee" << endl;
     }
     cout << r << endl;

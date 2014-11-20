@@ -6,56 +6,59 @@ using namespace std;
 #include <exception>
 #include <string>
 #include <iostream>
+
 class EtatRobot
 {
 	public:
+        class UnAuthorizedAction{};
+
+
         virtual EtatRobot* avancer() {
-            throw "Not yet implemented";
+            throw UnAuthorizedAction();
         }
 
         virtual EtatRobot* tourner() {
-            throw "Not yet implemented";
+            throw UnAuthorizedAction();
         }
 
         virtual EtatRobot* saisir() {
-            throw "Not yet implemented";
+            throw UnAuthorizedAction();
         }
 
         virtual EtatRobot* poser() {
-            throw "Not yet implemented";
+            throw UnAuthorizedAction();
         }
 
         virtual EtatRobot* peser() {
-            throw "Not yet implemented";
+            throw UnAuthorizedAction();
         }
 
         virtual EtatRobot* rencontrerPlot() {
-            cout << "ETATROBOT"<< endl;
-            throw "Not yet implemented";
+            throw UnAuthorizedAction();
         }
 
         virtual EtatRobot* evaluerPlot() {
-            throw "Not yet implemented";
+            throw UnAuthorizedAction();
         }
 
         virtual EtatRobot* figer() {
-            throw "Not yet implemented";
+            throw UnAuthorizedAction();
         }
 
         virtual EtatRobot* repartir() {
-            throw "Not yet implemented";
+            throw UnAuthorizedAction();
         }
 
         virtual void afficher() {
-            throw "Not yet implemented";
+            throw UnAuthorizedAction();
         }
 
         EtatRobot& operator= (const EtatRobot&) {}
 
-    friend ostream& operator << (ostream& os, const EtatRobot& r)
-    {
-       return os << &r;
-    }
+        friend ostream& operator << (ostream& os, const EtatRobot& r)
+        {
+           return os << &r;
+        }
 };
 
 #endif

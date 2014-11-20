@@ -49,8 +49,6 @@ class Robot
         void attach(Observer* obs);
         void detach(Observer* obs);
 
-        class UnAuthorizedAction{};
-
         friend ostream& operator << (ostream& os, const Robot& r)
         {
            os << r._position << "Etat : " << r._etat;
