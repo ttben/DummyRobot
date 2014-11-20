@@ -43,7 +43,7 @@ void Robot::figer() {
 }
 
 void Robot::repartir() {
-	throw "Not yet implemented";
+	_etat = _etat->repartir()   ;
 }
 
 void Robot::afficher() {

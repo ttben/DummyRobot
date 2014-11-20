@@ -5,12 +5,15 @@ using namespace std;
 #include "Robot.h"
 #include "SingletonHandler.h"
 #include "Plot.h"
+#include "Afficheur.h"
 int main()
 {
     Robot r;
 
     cout << "Creation d'un singleton de EtatRobotAVide" << endl;
-    EtatRobot* erav = EtatRobotAVide::getInstance();
+   // EtatRobot* erav = EtatRobotAVide::getInstance();
+
+    Afficheur a = Afficheur(&r);
 
 /*
     //  Test SingletonHandler

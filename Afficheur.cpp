@@ -7,7 +7,7 @@ using namespace std;
 
 
 Afficheur::Afficheur(Robot* _r) {
-    _sujet = r;
+    _sujet = _r;
     _r->attach(this);
 }
 
