@@ -20,7 +20,7 @@ class EtatRobotEnChargeFacePlot: public EtatRobotEnRoute
 
 	public: EtatRobot* tourner();
 
-	public: EtatRobot* getInstance();
+	public: static EtatRobot* getInstance();
 
 	private: EtatRobotEnChargeFacePlot();
 };

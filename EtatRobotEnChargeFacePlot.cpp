@@ -1,24 +1,36 @@
 #include <exception>
 using namespace std;
 
+#include "EtatRobotAVideFacePlot.h"
 #include "EtatRobotEnChargeFacePlot.h"
+#include "EtatRobotEnCharge.h"
 #include "EtatRobot.h"
 #include "EtatRobotEnRoute.h"
+#include "SingletonHandler.h"
 
 EtatRobot* EtatRobotEnChargeFacePlot::poser() {
-	throw "Not yet implemented";
+	return EtatRobotAVideFacePlot::getInstance();
 }
 
 EtatRobot* EtatRobotEnChargeFacePlot::peser() {
-	throw "Not yet implemented";
+	return this;
 }
 
 EtatRobot* EtatRobotEnChargeFacePlot::tourner() {
-	throw "Not yet implemented";
+	return EtatRobotEnCharge::getInstance();
 }
 
 EtatRobot* EtatRobotEnChargeFacePlot::getInstance() {
-	throw "Not yet implemented";
+	if(SingletonHandler::existe("EtatRobotEnChargeFacePlot")) {
+        cout << "Le singleton EtatRobotEnChargeFacePlot existe deja à @" <<SingletonHandler::recupererInstance("EtatRobotEnChargeFacePlot") << endl;
+        return SingletonHandler::recupererInstance("EtatRobotEnChargeFacePlot");
+    }
+
+    EtatRobot* etat = new EtatRobotEnChargeFacePlot;
+
+    SingletonHandler::ajouterSingleton("EtatRobotEnChargeFacePlot", etat);
+
+    return SingletonHandler::recupererInstance("EtatRobotEnChargeFacePlot");
 }
 
 EtatRobotEnChargeFacePlot::EtatRobotEnChargeFacePlot() {

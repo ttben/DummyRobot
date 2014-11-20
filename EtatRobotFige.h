@@ -19,7 +19,7 @@ class EtatRobotFige: public EtatRobot
 
 	public: void setEtatPrecedent(EtatRobotEnRoute aEtatPrecedent);
 
-	public: EtatRobot* getInstance();
+	public: static EtatRobot* getInstance();
 
 	private: EtatRobotFige();
 };

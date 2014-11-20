@@ -1,20 +1,22 @@
 using namespace std;
 
+#include "EtatRobotEnChargeFacePlot.h"
 #include "EtatRobotAVideFacePlot.h"
+#include "EtatRobotAVide.h"
 #include "EtatRobotEnRoute.h"
 #include "SingletonHandler.h"
 #include <exception>
 
 EtatRobot* EtatRobotAVideFacePlot::tourner() {
-	throw "Not yet implemented";
+	return EtatRobotAVide::getInstance();
 }
 
 EtatRobot* EtatRobotAVideFacePlot::saisir() {
-	throw "Not yet implemented";
+	return EtatRobotEnChargeFacePlot::getInstance();
 }
 
 EtatRobot* EtatRobotAVideFacePlot::evaluerPlot() {
-	throw "Not yet implemented";
+    return this;
 }
 
 EtatRobot* EtatRobotAVideFacePlot::getInstance() {
