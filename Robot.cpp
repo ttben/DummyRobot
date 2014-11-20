@@ -64,6 +64,6 @@ void Robot::attach(Observer* obs)
 
 void Robot::detach(Observer* obs)
 {
-    _listObservers.erase(remove(_listObservers.begin(), _listObservers.end(), obs), _listObservers.end());
+    //_listObservers.erase(remove(_listObservers.begin(), _listObservers.end(), obs), _listObservers.end());
 }
 

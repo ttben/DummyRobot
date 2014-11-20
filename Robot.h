@@ -13,7 +13,7 @@ using namespace std;
 #include "Position.h"
 #include <iostream>
 #include "SingletonHandler.h"
-
+ #include "Observer.h"
 class Robot
 {
 	private:
