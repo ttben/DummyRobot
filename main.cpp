@@ -7,6 +7,8 @@ using namespace std;
 #include "Plot.h"
 #include "Afficheur.h"
 #include "AfficheurLigne.h"
+#include "AfficheurColonne.h"
+
 int main()
 {
     Robot r;
@@ -14,8 +16,10 @@ int main()
     cout << "Creation d'un singleton de EtatRobotAVide" << endl;
    // EtatRobot* erav = EtatRobotAVide::getInstance();
 
-    Afficheur a = AfficheurLigne(&r);
-    r.attach(&a);
+    Afficheur aLigne = AfficheurLigne(&r);
+    Afficheur aColonne = AfficheurColonne(&r);
+    r.attach(&aLigne);
+    r.attach(&aColonne);
 
 /*
     //  Test SingletonHandler
@@ -31,11 +35,11 @@ int main()
     Plot p;
     r.rencontrerPlot(p);
     try {
-        cout << "Tentative d'effectuer une action non autorisee ..." << endl;
+        cout << "-- Tentative d'effectuer une action non autorisee ..." << endl;
         r.repartir();
     }
     catch (EtatRobot::UnAuthorizedAction e) {
-        cout << "Erreur d'execution attendue, relevee" << endl;
+        cout << "\tErreur d'execution attendue, relevee ==> OK" << endl;
     }
     cout << r << endl;
     return 0;

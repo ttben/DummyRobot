@@ -123,13 +123,10 @@
 	<map>
 	"EtatRobot.h"
 
-1416473510 source:/home/bb102748/Documents/DR/DummyRobot/Afficheur.cpp
-	<exception>
+1416476888 source:/home/bb102748/Documents/DR/DummyRobot/Afficheur.cpp
 	"Afficheur.h"
-	"Robot.h"
-	"Observer.h"
 
-1416420958 /home/bb102748/Documents/DR/DummyRobot/Afficheur.h
+1416479181 /home/bb102748/Documents/DR/DummyRobot/Afficheur.h
 	<exception>
 	"Robot.h"
 	"Observer.h"
@@ -183,14 +180,11 @@
 	<map>
 	"EtatRobot.h"
 
-1416420856 /home/bb102748/Documents/DR/DummyRobot/Observer.h
+1416479140 /home/bb102748/Documents/DR/DummyRobot/Observer.h
 	<exception>
 
-1416468161 source:/home/bb102748/Documents/DR/DummyRobot/EtatRobot.cpp
-	<exception>
+1416476930 source:/home/bb102748/Documents/DR/DummyRobot/EtatRobot.cpp
 	"EtatRobot.h"
-	"Robot.h"
-	<iostream>
 
 1416468161 source:/home/bb102748/Documents/DR/DummyRobot/EtatRobotAVide.cpp
 	<exception>
@@ -240,19 +234,21 @@
 	"EtatRobotEnRoute.h"
 	"EtatRobot.h"
 
-1416473503 source:/home/bb102748/Documents/DR/DummyRobot/main.cpp
+1416477004 source:/home/bb102748/Documents/DR/DummyRobot/main.cpp
 	<iostream>
 	"Robot.h"
 	"SingletonHandler.h"
 	"Plot.h"
+	"Afficheur.h"
+	"AfficheurLigne.h"
+	"AfficheurColonne.h"
 
 1416468161 source:/home/bb102748/Documents/DR/DummyRobot/Objet.cpp
 	"Objet.h"
 
-1416280072 source:/home/bb102748/Documents/DR/DummyRobot/Observer.cpp
+1416475969 source:/home/bb102748/Documents/DR/DummyRobot/Observer.cpp
 	<exception>
 	"Observer.h"
-	"Robot.h"
 
 1416468161 source:/home/bb102748/Documents/DR/DummyRobot/Plot.cpp
 	"Plot.h"
@@ -260,7 +256,7 @@
 1416468161 source:/home/bb102748/Documents/DR/DummyRobot/Position.cpp
 	"Position.h"
 
-1416469434 source:/home/bb102748/Documents/DR/DummyRobot/Robot.cpp
+1416475445 source:/home/bb102748/Documents/DR/DummyRobot/Robot.cpp
 	<exception>
 	"Robot.h"
 
@@ -268,4 +264,16 @@
 	<exception>
 	<map>
 	"SingletonHandler.h"
+
+1416475774 source:/home/bb102748/Documents/DR/DummyRobot/AfficheurColonne.cpp
+	"AfficheurColonne.h"
+
+1416476737 /home/bb102748/Documents/DR/DummyRobot/AfficheurColonne.h
+	"Afficheur.h"
+
+1416475824 source:/home/bb102748/Documents/DR/DummyRobot/AfficheurLigne.cpp
+	"AfficheurLigne.h"
+
+1416476737 /home/bb102748/Documents/DR/DummyRobot/AfficheurLigne.h
+	"Afficheur.h"
 

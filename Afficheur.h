@@ -1,26 +1,22 @@
-#include <exception>
 using namespace std;
 
 #ifndef __Afficheur_h__
 #define __Afficheur_h__
 
+#include <exception>
 #include "Robot.h"
 #include "Observer.h"
 
-//class Robot;
-// class Observer;
-//class Afficheur;
-
 class Afficheur: public Observer
 {
-protected:
-    Afficheur(Robot* _r);
-
 public:
     Robot* _sujet;
+    Afficheur(Robot* _r) {
+        _sujet = _r;
+        _r->attach(this);
+    }
 
-
-    void update();
+    void update() {}
 };
 
 #endif
