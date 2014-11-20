@@ -6,6 +6,7 @@ using namespace std;
 #include "SingletonHandler.h"
 #include "Plot.h"
 #include "Afficheur.h"
+#include "AfficheurLigne.h"
 int main()
 {
     Robot r;
@@ -13,7 +14,8 @@ int main()
     cout << "Creation d'un singleton de EtatRobotAVide" << endl;
    // EtatRobot* erav = EtatRobotAVide::getInstance();
 
-    Afficheur a = Afficheur(&r);
+    Afficheur a = AfficheurLigne(&r);
+
 
 /*
     //  Test SingletonHandler

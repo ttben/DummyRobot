@@ -13,12 +13,12 @@ using namespace std;
 
 class Afficheur: public Observer
 {
+protected:
+    Afficheur(Robot* _r);
+
 public:
     Robot* _sujet;
 
-    Afficheur() {};
-
-    Afficheur(Robot* _r);
 
     void update();
 };
