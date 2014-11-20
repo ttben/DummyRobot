@@ -50,3 +50,20 @@ void Robot::afficher() {
 	throw "Not yet implemented";
 }
 
+void Robot::notify()
+{
+    for (int i = 0; i < _listObservers.size(); i++)
+        _listObservers[i]->update();
+
+}
+
+void Robot::attach(Observer* obs)
+{
+    _listObservers.push_back(obs);
+}
+
+void Robot::detach(Observer* obs)
+{
+    _listObservers.erase(remove(_listObservers.begin(), _listObservers.end(), obs), _listObservers.end());
+}
+

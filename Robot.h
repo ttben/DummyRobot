@@ -6,7 +6,7 @@ using namespace std;
 
 #include <exception>
 #include <string>
-//#include "EtatRobot.h"
+#include <vector>
 #include "EtatRobotAVide.h"
 #include "Plot.h"
 #include "Objet.h"
@@ -22,6 +22,8 @@ class Robot
         Objet _objet;
         Position _position;
         EtatRobot* _etat;
+       	vector<Observer*> _listObservers;
+
 	public:
 	    Robot() {
             _etat = (EtatRobotAVide::getInstance());
@@ -43,6 +45,11 @@ class Robot
         void figer();
         void repartir();
         void afficher();
+        void notify();
+        void attach(Observer* obs);
+        void detach(Observer* obs);
+
+        class UnAuthorizedAction{};
 
         friend ostream& operator << (ostream& os, const Robot& r)
         {
