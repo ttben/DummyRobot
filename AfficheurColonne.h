@@ -8,9 +8,7 @@ class AfficheurColonne : public Afficheur
     public:
         AfficheurColonne(Robot* _r): Afficheur(_r){};
 
-        void update() {
-            cout << "AFFICHEUR COLONNE :" << _sujet->GetPosition() << endl;
-        }
+        void update();
 };
 
 #endif // AFFICHEURLIGNE_H

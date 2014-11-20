@@ -15,8 +15,7 @@ public:
         _sujet = _r;
         _r->attach(this);
     }
-
-    void update() {}
+    void update() {};
 };
 
 #endif

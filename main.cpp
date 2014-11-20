@@ -12,6 +12,14 @@ using namespace std;
 int main()
 {
     Robot r;
+
+    Afficheur aL = AfficheurLigne(&r);
+    Afficheur aC = AfficheurColonne(&r);
+
+
+    r.attach(&aL);
+    r.attach(&aC);
+
 /*
     //  Test SingletonHandler
     cout << "Creation de 3 autres EtatRobotAVide (normalement => meme @)" << endl;

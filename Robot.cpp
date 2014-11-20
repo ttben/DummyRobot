@@ -28,6 +28,7 @@ void Robot::poser() {
 
 int Robot::peser() {
     _etat = _etat->peser();
+    return _objet->getPoids();
 }
 
 void Robot::rencontrerPlot(Plot p) {

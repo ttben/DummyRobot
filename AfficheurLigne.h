@@ -8,9 +8,7 @@ class AfficheurLigne : public Afficheur
     public:
         AfficheurLigne(Robot* _r):Afficheur(_r){};
 
-        void update() {
-            cout << "AFFICHEUR LIGNE :" << _sujet->GetPosition() << endl;
-        }
+        void update();
 };
 
 #endif // AFFICHEURLIGNE_H
