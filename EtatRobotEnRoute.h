@@ -11,14 +11,13 @@ class EtatRobotEnRoute: public EtatRobot
 	public:
 	    virtual EtatRobot* figer();
 		virtual EtatRobot* avancer() {
-		            throw "Not yet implemented";
+		            throw EtatRobot::UnAuthorizedAction();
         };
         virtual EtatRobot* tourner() {
-            throw "NOT YET IMPLEMENTED";
+            throw EtatRobot::UnAuthorizedAction();
         };
         virtual EtatRobot* rencontrerPlot(){
-            cout << "ETATROBOTENROUTE"<< endl;
-            throw "Not yet implemented";
+            throw EtatRobot::UnAuthorizedAction();
         }
 };
 

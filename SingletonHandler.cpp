@@ -4,7 +4,3 @@ using namespace std;
 #include "SingletonHandler.h"
 
 SingletonHandler::MapSingleton SingletonHandler::_singletons;
-
-
-
-

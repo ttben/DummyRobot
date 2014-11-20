@@ -13,7 +13,6 @@ class EtatRobotEnChargeFacePlot;
 
 class EtatRobotEnChargeFacePlot: public EtatRobotEnRoute
 {
-
 	public: EtatRobot* poser();
 
 	public: EtatRobot* peser();
