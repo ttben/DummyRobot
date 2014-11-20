@@ -16,23 +16,12 @@ int main()
     Afficheur aL = AfficheurLigne(&r);
     Afficheur aC = AfficheurColonne(&r);
 
-
     r.attach(&aL);
     r.attach(&aC);
 
-/*
-    //  Test SingletonHandler
-    cout << "Creation de 3 autres EtatRobotAVide (normalement => meme @)" << endl;
-    EtatRobot* erav2 = (EtatRobotAVide::getInstance());
-    EtatRobot* erav3 = EtatRobotAVide::getInstance();
-    EtatRobot* erav4 = EtatRobotAVide::getInstance();
-
-    cout << "Toutes les valeurs ci-dessous doivent etre identiques" << endl;
-    cout << erav << " | " <<  erav2 << " | " << erav3 << " | " << erav4 << endl;
-*/
-    cout << r << endl;
     Plot p;
     Objet o;
+
     r.rencontrerPlot(p);
     r.tourner("E");
     r.avancer(4, 5);

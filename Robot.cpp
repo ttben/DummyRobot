@@ -1,10 +1,13 @@
 #include <exception>
 #include "Robot.h"
+#include <iostream>
+#include <string>
 
 using namespace std;
 
 
 void Robot::avancer(int x, int y) {
+    _dernierOrdreRecu = new string("avancer(") + new string(x) + new string(", ") + new string(y) + new string(")");
     _etat = _etat->avancer();
     _position.setX(x);
     _position.setY(y);

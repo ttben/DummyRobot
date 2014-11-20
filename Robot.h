@@ -23,6 +23,7 @@ class Robot
         Position _position;
         EtatRobot* _etat;
        	vector<Observer*> _listObservers;
+       	string _dernierOrdreRecu;
 
 	public:
 	    Robot() {
