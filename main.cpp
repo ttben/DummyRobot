@@ -15,7 +15,7 @@ int main()
    // EtatRobot* erav = EtatRobotAVide::getInstance();
 
     Afficheur a = AfficheurLigne(&r);
-
+    r.attach(&a);
 
 /*
     //  Test SingletonHandler

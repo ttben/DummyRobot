@@ -29,6 +29,7 @@ void Robot::rencontrerPlot(Plot p) {
     //TODO FIXME ::
     cout << _etat << endl;
     (_etat)->rencontrerPlot();
+    notify();
 //    delete _etat;
 //    _etat = etmp;
     _plot = p;
