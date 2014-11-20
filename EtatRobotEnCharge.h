@@ -22,7 +22,7 @@ class EtatRobotEnCharge: public EtatRobotEnRoute
 
 	public: EtatRobot* rencontrerPlot();
 
-	public: EtatRobot* getInstance();
+	public: static EtatRobot* getInstance();
 
 	private: EtatRobotEnCharge();
 };

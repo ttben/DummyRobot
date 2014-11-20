@@ -12,15 +12,6 @@ using namespace std;
 int main()
 {
     Robot r;
-
-    cout << "Creation d'un singleton de EtatRobotAVide" << endl;
-   // EtatRobot* erav = EtatRobotAVide::getInstance();
-
-    Afficheur aLigne = AfficheurLigne(&r);
-    Afficheur aColonne = AfficheurColonne(&r);
-    r.attach(&aLigne);
-    r.attach(&aColonne);
-
 /*
     //  Test SingletonHandler
     cout << "Creation de 3 autres EtatRobotAVide (normalement => meme @)" << endl;
@@ -33,7 +24,18 @@ int main()
 */
     cout << r << endl;
     Plot p;
+    Objet o;
     r.rencontrerPlot(p);
+    r.tourner("E");
+    r.avancer(4, 5);
+    r.rencontrerPlot(p);
+    r.saisir(o);
+    r.tourner("O");
+    r.avancer(2, 3);
+    r.rencontrerPlot(p);
+    r.poser();
+    r.figer();
+    r.repartir();
     try {
         cout << "-- Tentative d'effectuer une action non autorisee ..." << endl;
         r.repartir();

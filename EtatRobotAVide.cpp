@@ -4,12 +4,18 @@ using namespace std;
 #include "EtatRobotAVide.h"
 #include "SingletonHandler.h"
 EtatRobotAVide::EtatRobotAVide() {
-
 }
 
 EtatRobot* EtatRobotAVide::rencontrerPlot() {
-    cout << "ETATROBOTAVIDE" << endl;
     return EtatRobotAVideFacePlot::getInstance();
+}
+
+EtatRobot* EtatRobotAVide::avancer(){
+    return this;
+}
+
+EtatRobot* EtatRobotAVide::tourner(){
+    return this;
 }
 
 EtatRobot* EtatRobotAVide::getInstance() {

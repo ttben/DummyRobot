@@ -4,19 +4,27 @@ using namespace std;
 #include "EtatRobotFige.h"
 #include "EtatRobotEnRoute.h"
 #include "EtatRobot.h"
-
-EtatRobot* EtatRobotFige::repartir() {
-	throw "Not yet implemented";
-}
-
-void EtatRobotFige::setEtatPrecedent(EtatRobotEnRoute aEtatPrecedent) {
-	throw "Not yet implemented";
-}
-
-EtatRobot* EtatRobotFige::getInstance() {
-	throw "Not yet implemented";
-}
-
+#include "SingletonHandler.h"
 EtatRobotFige::EtatRobotFige() {
 }
 
+EtatRobot* EtatRobotFige::repartir() {
+	return &_etatPrecedent;
+}
+
+void EtatRobotFige::setEtatPrecedent(EtatRobotEnRoute aEtatPrecedent) {
+	_etatPrecedent = aEtatPrecedent;
+}
+
+EtatRobot* EtatRobotFige::getInstance() {
+	if(SingletonHandler::existe("EtatRobotFige")) {
+        cout << "Le singleton EtatRobotFige existe deja à @" <<SingletonHandler::recupererInstance("EtatRobotFige") << endl;
+        return SingletonHandler::recupererInstance("EtatRobotFige");
+    }
+
+    EtatRobot* etat = new EtatRobotFige;
+
+    SingletonHandler::ajouterSingleton("EtatRobotFige", etat);
+
+    return SingletonHandler::recupererInstance("EtatRobotFige");
+}

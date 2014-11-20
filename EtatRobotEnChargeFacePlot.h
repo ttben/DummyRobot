@@ -13,14 +13,13 @@ class EtatRobotEnChargeFacePlot;
 
 class EtatRobotEnChargeFacePlot: public EtatRobotEnRoute
 {
-
 	public: EtatRobot* poser();
 
 	public: EtatRobot* peser();
 
 	public: EtatRobot* tourner();
 
-	public: EtatRobot* getInstance();
+	public: static EtatRobot* getInstance();
 
 	private: EtatRobotEnChargeFacePlot();
 };
