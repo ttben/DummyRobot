@@ -25,7 +25,7 @@ EtatRobot* EtatRobotEnCharge::rencontrerPlot() {
 
 EtatRobot* EtatRobotEnCharge::getInstance() {
     if(SingletonHandler::existe("EtatRobotEnCharge")) {
-        cout << "Le singleton EtatRobotAVide existe deja à @" <<SingletonHandler::recupererInstance("EtatRobotEnCharge") << endl;
+        cout << "Le singleton EtatRobotEnCharge existe deja à @" <<SingletonHandler::recupererInstance("EtatRobotEnCharge") << endl;
         return SingletonHandler::recupererInstance("EtatRobotEnCharge");
     }
 

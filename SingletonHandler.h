@@ -26,14 +26,10 @@ class SingletonHandler
 //        static EtatRobot recupererInstance(string nom);
 
 	    static void ajouterSingleton(string nom, EtatRobot* instance) {
-	        dump_map(SingletonHandler::_singletons);
             SingletonHandler::_singletons.insert(pair<string,EtatRobot*>(nom, instance));
-            dump_map(SingletonHandler::_singletons);
         }
 
         static bool existe(string nom) {
-
-
             return SingletonHandler::_singletons.count(nom) != 0;
         }
 

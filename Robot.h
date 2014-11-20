@@ -18,8 +18,8 @@ class Robot
 {
 	private:
 	    string _direction;
-        Plot _plot;
-        Objet _objet;
+        Plot* _plot;
+        Objet* _objet;
         Position _position;
         EtatRobot* _etat;
        	vector<Observer*> _listObservers;
@@ -27,8 +27,9 @@ class Robot
 	public:
 	    Robot() {
             _etat = (EtatRobotAVide::getInstance());
-            cout << "@Robot#etat : " << _etat <<"@SingleHandler#etat : " << SingletonHandler::recupererInstance("EtatRobotAVide") << endl;
-            _position = Position(1,1);
+            _position = Position(0,0);
+            _plot = NULL;
+            _objet = NULL;
         }
 
         Position& GetPosition() {
@@ -51,7 +52,7 @@ class Robot
 
         friend ostream& operator << (ostream& os, const Robot& r)
         {
-           os << r._position << "Etat : " << r._etat;
+           os << "Position : " << r._position << ", Etat : " << r._etat << ", Objet : " << r._objet << ", Plot : " << r._plot;
            return os;
         }
 };

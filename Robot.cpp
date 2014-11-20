@@ -5,45 +5,47 @@ using namespace std;
 
 
 void Robot::avancer(int x, int y) {
-	throw "Not yet implemented";
+    _etat = _etat->avancer();
+    _position.setX(x);
+    _position.setY(y);
 }
 
 void Robot::tourner(string d) {
-	throw "Not yet implemented";
+    _etat = _etat->tourner();
+    _direction = d;
+    _plot = NULL;
 }
 
 void Robot::saisir(Objet o) {
-	throw "Not yet implemented";
+    _etat = _etat->saisir();
+    _objet = &o;
 }
 
 void Robot::poser() {
-	throw "Not yet implemented";
+    _etat = _etat->poser();
+    _objet = NULL;
 }
 
 int Robot::peser() {
-	throw "Not yet implemented";
+    _etat = _etat->peser();
 }
 
 void Robot::rencontrerPlot(Plot p) {
-    cout << "ROBOT#RENCONTRERPLOT\t" << _etat << endl;
-    //TODO FIXME ::
-    cout << _etat << endl;
-    (_etat)->rencontrerPlot();
-//    delete _etat;
-//    _etat = etmp;
-    _plot = p;
+    _etat = _etat->rencontrerPlot();
+    _plot = &p;
 }
 
 int Robot::evaluerPlot() {
-	throw "Not yet implemented";
+    _etat = _etat->evaluerPlot();
+    return _plot->getHauteur();
 }
 
 void Robot::figer() {
-	throw "Not yet implemented";
+    _etat = _etat->figer();
 }
 
 void Robot::repartir() {
-	_etat = _etat->repartir()   ;
+    _etat = _etat->repartir();
 }
 
 void Robot::afficher() {
