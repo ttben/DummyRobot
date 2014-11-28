@@ -10,11 +10,16 @@ using namespace std;
 class CommandeAvancer: public Commande
 {
     public:
-        static CommandeAvancer* monExemplaire;
+        static CommandeAvancer monExemplaire;
 
-        public: CommandeAvancer() : Commande() {};
+    private :
+        int _x;
+        int _y;
+
+    public: CommandeAvancer() : Commande() {};
 	public: CommandeAvancer(string nom);
-
+    private:
+    CommandeAvancer(int x, int y);
 	public: Commande* virtualConstructor(Parser p);
 
 	public: virtual void executer();

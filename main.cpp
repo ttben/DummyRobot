@@ -8,9 +8,11 @@ using namespace std;
 #include "Afficheur.h"
 #include "AfficheurLigne.h"
 #include "AfficheurColonne.h"
+#include "Parser.h"
 
 int main()
 {
+    /*
     Robot r;
 
     Afficheur aL = AfficheurLigne(&r);
@@ -41,5 +43,11 @@ int main()
     catch (EtatRobot::UnAuthorizedAction e) {
         cout << "\tErreur d'execution attendue, relevee ==> OK" << endl;
     }
+
+    */
+
+    Parser p;
+    p.load("commandes_sources.txt");
+
     return 0;
 }

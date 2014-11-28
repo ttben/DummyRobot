@@ -4,14 +4,12 @@ using namespace std;
 #ifndef __Invocateur_h__
 #define __Invocateur_h__
 
-__interface Invocateur;
-
-__interface Invocateur
+class Invocateur
 {
 
-	public: virtual void getInt() = 0;
+	public: virtual int getInt() = 0;
 
-	public: virtual void getString() = 0;
+	public: virtual string getString() = 0;
 };
 
 #endif

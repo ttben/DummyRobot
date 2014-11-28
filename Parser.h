@@ -12,13 +12,14 @@ using namespace std;
 class Parser: public Invocateur
 {
 
+    private: string current_line;
 	public: void load(string file);
-
+    public : void updateString(vector<string> elems);
 	public: string getNomCommande(string ligne);
 
-	public: void getInt();
+	public: int getInt();
 
-	public: void getString();
+	public: string getString();
 	vector<string> split(string str,string sep);
 
 };

@@ -14,7 +14,7 @@ using namespace std;
 
 class Commande
 {
-	static map<string, Commande*> &commandesInscrites();
+	public: static map<string, Commande*> &commandesInscrites();
 
 	public: Invocateur* _invocateur;
 

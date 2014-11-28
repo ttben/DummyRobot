@@ -12,6 +12,9 @@ using namespace std;
 #include <stdio.h>
 #include <string.h>
 #include "Commande.h"
+
+
+
 void Parser::load(string file) {
     ifstream fichier(file, ios::in);
 
@@ -19,9 +22,11 @@ void Parser::load(string file) {
     {
         string contenu;
         while(getline(fichier, contenu)) {
+            this->current_line = contenu;
             string nomCommande = getNomCommande(contenu);
             cout << "COMMANDE TROUVEE :: " << nomCommande << endl;
             Commande* c = Commande::nouvelleCommande(nomCommande, *this);
+
         }
         fichier.close();
     }
@@ -33,6 +38,7 @@ string Parser::getNomCommande(string ligne) {
 
     vector<std::string> elems;
     elems = split(ligne, " ");
+    updateString(elems);
     return elems.at(0);
 }
 
@@ -48,11 +54,28 @@ std::vector<std::string> Parser::split(std::string str,std::string sep){
     return arr;
 }
 
-void Parser::getInt() {
-	throw "Not yet implemented";
+void Parser::updateString(vector<string> elems) {
+    current_line = "";
+    for(int i = 1 ; i < elems.size() ; i ++) {
+        current_line += elems.at(i);
+        current_line += " ";
+    }
+
 }
 
-void Parser::getString() {
-	throw "Not yet implemented";
+int Parser::getInt() {
+    vector<std::string> elems;
+    cout << "CURRENT LINE:" << current_line << endl;
+    elems = split(current_line, " ");
+    int i = atoi(elems.at(0).c_str());
+    updateString(elems);
+    return i;
+}
+
+string Parser::getString() {
+    vector<std::string> elems;
+    elems = split(current_line, " ");
+    updateString(elems);
+    return elems.at(0);
 }
 

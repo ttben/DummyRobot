@@ -6,13 +6,23 @@ using namespace std;
 #include "Commande.h"
 #include "Parser.h"
 
-Commande::commandesInscrites()["AVANCER"] = CommandeAvancer::monExemplaire("AVANCER");
+CommandeAvancer CommandeAvancer::monExemplaire("AVANCER");
 
 CommandeAvancer::CommandeAvancer(string nom) {
+    Commande::commandesInscrites()[nom] = this;
+}
+
+CommandeAvancer::CommandeAvancer(int x, int y) {
+    this->_x = x;
+    this->_y = y;
 }
 
 Commande* CommandeAvancer::virtualConstructor(Parser p) {
-    return new CommandeAvancer();
+    _x = p.getInt();
+    _y = p.getInt();
+
+    cout << "ON A DEMANDE DE CONSTRUIRE UN AVANCER (" << _x << "," << _y << ")" << endl;
+    return new CommandeAvancer(_x, _y);
 }
 
 void CommandeAvancer::executer() {
