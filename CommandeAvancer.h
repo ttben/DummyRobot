@@ -16,17 +16,20 @@ class CommandeAvancer: public Commande
         int _x;
         int _y;
 
-    public: CommandeAvancer() : Commande() {};
-	public: CommandeAvancer(string nom);
-    private:
-    CommandeAvancer(int x, int y);
-	public: Commande* virtualConstructor(Parser p);
+        int _oldX;
+        int _oldY;
 
-	public: virtual void executer();
+        CommandeAvancer(int x, int y);
 
-	public: virtual void annuler();
 
-	public: virtual bool estAnnulable();
+    public:
+        CommandeAvancer() : Commande() {};
+        CommandeAvancer(string nom);
+        Commande* virtualConstructor(Parser p);
+
+        void executer(Robot* r);
+        void annuler(Robot* r);
+        bool estAnnulable();
 };
 
 #endif

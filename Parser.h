@@ -1,26 +1,43 @@
-
 using namespace std;
 
 #ifndef __Parser_h__
 #define __Parser_h__
 
-#include "Invocateur.h"
 #include <exception>
 #include <string>
 #include <vector>
+#include <fstream>
+#include <iostream>
+#include <sstream>
 
+#include <vector>
+#include <stdio.h>
+#include <string.h>
+#include <exception>
+#include <string>
+
+#include "Invocateur.h"
+#include "Robot.h"
+
+class Commande;
 class Parser: public Invocateur
 {
 
-    private: string current_line;
-	public: void load(string file);
-    public : void updateString(vector<string> elems);
-	public: string getNomCommande(string ligne);
+public:
+    void select_file(string file);
+    void execute_next_action(Robot* r);
+    void annuler_action(Robot* r);
+    int getInt();
+    string getString();
 
-	public: int getInt();
+private:
+    ifstream* fichier;
+    vector<Commande*> commandes_executees;
 
-	public: string getString();
-	vector<string> split(string str,string sep);
+    string getNomCommande(string ligne);
+    void updateString(vector<string> elems);
+    vector<string> split(string str,string sep);
+
 
 };
 

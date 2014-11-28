@@ -1,14 +1,11 @@
-#include <iostream>
 
 using namespace std;
 
 #include "Robot.h"
-#include "SingletonHandler.h"
-#include "Plot.h"
 #include "Afficheur.h"
-#include "AfficheurLigne.h"
 #include "AfficheurColonne.h"
 #include "Parser.h"
+#include <iostream>
 
 int main()
 {
@@ -46,8 +43,14 @@ int main()
 
     */
 
+    Robot r;
+    Afficheur a = AfficheurColonne(&r);
+    r.attach(&a);
+
     Parser p;
-    p.load("commandes_sources.txt");
+    p.select_file("commandes_sources.txt");
+    p.execute_next_action(&r);
+    p.annuler_action(&r);
 
     return 0;
 }

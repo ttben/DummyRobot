@@ -1,48 +1,53 @@
-#include <exception>
-#include <string>
 using namespace std;
 
-#include "Parser.h"
-#include "Invocateur.h"
 #include <fstream>
 #include <iostream>
-#include <vector>
-#include <string>
 #include <sstream>
+
+#include <vector>
 #include <stdio.h>
 #include <string.h>
+#include <exception>
+#include <string>
+
+#include "Parser.h"
+#include "Robot.h"
 #include "Commande.h"
 
+void Parser::annuler_action(Robot* r) {
+    commandes_executees.back()->annuler(r);
+}
 
 
-void Parser::load(string file) {
-    ifstream fichier(file, ios::in);
-
-    if(fichier)
-    {
-        string contenu;
-        while(getline(fichier, contenu)) {
-            this->current_line = contenu;
-            string nomCommande = getNomCommande(contenu);
-            cout << "COMMANDE TROUVEE :: " << nomCommande << endl;
-            Commande* c = Commande::nouvelleCommande(nomCommande, *this);
-
-        }
-        fichier.close();
+void Parser::select_file(string file) {
+    this->fichier= new ifstream(file,  std::ifstream::in);
+    if(fichier) {
+        cout << "Fichier ouvert correctement " << endl;
     }
-    else
+    else {
         cerr << "Impossible d'ouvrir le fichier !" << endl;
+    }
+}
+
+void Parser::execute_next_action(Robot* r) {
+    string contenu;
+    getline(*fichier, contenu);
+    this->current_line = contenu;
+    string nomCommande = getNomCommande(contenu);
+    cout << "COMMANDE TROUVEE :: " << nomCommande << endl;
+    Commande* c = Commande::nouvelleCommande(nomCommande, *this);
+    commandes_executees.push_back(c);
+    c->executer(r);
 }
 
 string Parser::getNomCommande(string ligne) {
-
     vector<std::string> elems;
     elems = split(ligne, " ");
     updateString(elems);
     return elems.at(0);
 }
 
-std::vector<std::string> Parser::split(std::string str,std::string sep){
+vector<string> Parser::split(string str,string sep){
     char* cstr=const_cast<char*>(str.c_str());
     char* current;
     std::vector<std::string> arr;
@@ -64,7 +69,7 @@ void Parser::updateString(vector<string> elems) {
 }
 
 int Parser::getInt() {
-    vector<std::string> elems;
+    vector<string> elems;
     cout << "CURRENT LINE:" << current_line << endl;
     elems = split(current_line, " ");
     int i = atoi(elems.at(0).c_str());
@@ -73,7 +78,7 @@ int Parser::getInt() {
 }
 
 string Parser::getString() {
-    vector<std::string> elems;
+    vector<string> elems;
     elems = split(current_line, " ");
     updateString(elems);
     return elems.at(0);

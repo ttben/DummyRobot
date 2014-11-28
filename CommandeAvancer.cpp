@@ -5,6 +5,7 @@ using namespace std;
 #include "CommandeAvancer.h"
 #include "Commande.h"
 #include "Parser.h"
+#include "Robot.h"
 
 CommandeAvancer CommandeAvancer::monExemplaire("AVANCER");
 
@@ -25,15 +26,20 @@ Commande* CommandeAvancer::virtualConstructor(Parser p) {
     return new CommandeAvancer(_x, _y);
 }
 
-void CommandeAvancer::executer() {
-	throw "Not yet implemented";
+void CommandeAvancer::executer(Robot* r) {
+    _oldX = r->GetPosition().getX();
+    _oldY = r->GetPosition().getY();
+    cout << "EXECUTION DE AVANCER " << _x << " ; " << _y << endl;
+    r->avancer(_x, _y);
+    //Commande::commandes_executees.push_back(this);
 }
 
-void CommandeAvancer::annuler() {
-	throw "Not yet implemented";
+void CommandeAvancer::annuler(Robot* r) {
+    cout << "ANNULATION DE AVANCER(" << _x << ", " << _y << ") RETOUR A (" << _oldX << ", " << _oldY << ")" << endl;
+    r->avancer(_oldX, _oldY);
 }
 
 bool CommandeAvancer::estAnnulable() {
-	throw "Not yet implemented";
+    return true;
 }
 

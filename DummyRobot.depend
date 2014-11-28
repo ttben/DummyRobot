@@ -243,15 +243,12 @@
 	"EtatRobotEnRoute.h"
 	"EtatRobot.h"
 
-1417181119 source:/home/bb102748/Documents/DR/DummyRobot/main.cpp
-	<iostream>
+1417185583 source:/home/bb102748/Documents/DR/DummyRobot/main.cpp
 	"Robot.h"
-	"SingletonHandler.h"
-	"Plot.h"
 	"Afficheur.h"
-	"AfficheurLigne.h"
 	"AfficheurColonne.h"
 	"Parser.h"
+	<iostream>
 
 1417160279 source:/home/bb102748/Documents/DR/DummyRobot/Objet.cpp
 	"Objet.h"
@@ -289,52 +286,62 @@
 1416480578 /home/bb102748/Documents/DR/DummyRobot/AfficheurLigne.h
 	"Afficheur.h"
 
-1417168911 source:/home/bb102748/Documents/DR/DummyRobot/Commande.cpp
+1417183410 source:/home/bb102748/Documents/DR/DummyRobot/Commande.cpp
 	<exception>
 	<string>
 	<map>
 	"Commande.h"
-	"Invocateur.h"
 
-1417179895 /home/bb102748/Documents/DR/DummyRobot/Commande.h
+1417186574 /home/bb102748/Documents/DR/DummyRobot/Commande.h
+	<iostream>
 	<exception>
 	<string>
 	<map>
+	"Robot.h"
 	"Parser.h"
-	<iostream>
 
-1417180886 /home/bb102748/Documents/DR/DummyRobot/Parser.h
-	"Invocateur.h"
+1417186533 /home/bb102748/Documents/DR/DummyRobot/Parser.h
 	<exception>
 	<string>
 	<vector>
+	<fstream>
+	<iostream>
+	<sstream>
+	<vector>
+	<stdio.h>
+	<string.h>
+	<exception>
+	<string>
+	"Invocateur.h"
+	"Robot.h"
 
-1417180383 /home/bb102748/Documents/DR/DummyRobot/Invocateur.h
+1417182841 /home/bb102748/Documents/DR/DummyRobot/Invocateur.h
+	<vector>
 	<exception>
 
-1417180441 source:/home/bb102748/Documents/DR/DummyRobot/CommandeAvancer.cpp
+1417186492 source:/home/bb102748/Documents/DR/DummyRobot/CommandeAvancer.cpp
 	<exception>
 	<string>
 	"CommandeAvancer.h"
 	"Commande.h"
 	"Parser.h"
+	"Robot.h"
 
-1417180244 /home/bb102748/Documents/DR/DummyRobot/CommandeAvancer.h
+1417184996 /home/bb102748/Documents/DR/DummyRobot/CommandeAvancer.h
 	<exception>
 	<string>
 	"Commande.h"
 
-1417181147 source:/home/bb102748/Documents/DR/DummyRobot/Parser.cpp
+1417186720 source:/home/bb102748/Documents/DR/DummyRobot/Parser.cpp
+	<fstream>
+	<iostream>
+	<sstream>
+	<vector>
+	<stdio.h>
+	<string.h>
 	<exception>
 	<string>
 	"Parser.h"
-	"Invocateur.h"
-	<fstream>
-	<iostream>
-	<vector>
-	<string>
-	<sstream>
-	<stdio.h>
-	<string.h>
+	"Robot.h"
 	"Commande.h"
 
