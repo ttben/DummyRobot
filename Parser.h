@@ -27,6 +27,8 @@ public:
     void select_file(string file);
     void execute_next_action(Robot* r);
     void annuler_action(Robot* r);
+	Plot getPlot();
+	Objet getObjet();
     int getInt();
     string getString();
 

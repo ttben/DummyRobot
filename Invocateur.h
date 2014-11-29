@@ -5,6 +5,8 @@ using namespace std;
 
 #include <vector>
 #include <exception>
+#include "Objet.h"
+#include "Plot.h"
 
 class Invocateur
 {
@@ -12,6 +14,10 @@ class Invocateur
 	public: virtual int getInt() = 0;
 
 	public: virtual string getString() = 0;
+
+	public: virtual Plot getPlot() = 0;
+
+	public: virtual Objet getObjet() = 0;
 
 	protected:
         string current_line;
