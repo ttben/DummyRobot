@@ -54,7 +54,7 @@ class Robot
 
         friend ostream& operator << (ostream& os, const Robot& r)
         {
-           os << "Position : " << r._position << ", Etat : " << r._etat << ", Objet : ";
+           os << "Position : " << r._position << ", Etat : " << *(r._etat) << ", Objet : ";
            if(r._objet != NULL){os << *(r._objet);}
            else {os << "aucun";}
            os << ", Plot : ";

@@ -57,7 +57,7 @@ class EtatRobot
 
         friend ostream& operator << (ostream& os, const EtatRobot& r)
         {
-           return os << &r;
+           return os << "caca";
         }
 };
 

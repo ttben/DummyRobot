@@ -13,6 +13,7 @@ using namespace std;
 #include "Parser.h"
 #include "Robot.h"
 #include "Commande.h"
+#include "Plot.h"
 
 void Parser::annuler_action(Robot* r) {
     commandes_executees.back()->annuler(r);
@@ -84,3 +85,8 @@ string Parser::getString() {
     return elems.at(0);
 }
 
+
+Plot* Parser::getPlot() {
+    return new Plot(getInt());
+
+}

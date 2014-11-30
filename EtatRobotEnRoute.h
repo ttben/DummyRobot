@@ -4,6 +4,7 @@ using namespace std;
 #define __EtatRobotEnRoute_h__
 
 #include <exception>
+#include <iostream>
 #include "EtatRobot.h"
 
 class EtatRobotEnRoute: public EtatRobot
@@ -18,6 +19,11 @@ class EtatRobotEnRoute: public EtatRobot
         };
         virtual EtatRobot* rencontrerPlot(){
             throw EtatRobot::UnAuthorizedAction();
+        }
+
+        friend ostream& operator << (ostream& os, const EtatRobotEnRoute& r)
+        {
+           return os << "pouet";
         }
 };
 

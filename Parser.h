@@ -18,6 +18,7 @@ using namespace std;
 
 #include "Invocateur.h"
 #include "Robot.h"
+#include "Plot.h"
 
 class Commande;
 class Parser: public Invocateur
@@ -29,6 +30,7 @@ public:
     void annuler_action(Robot* r);
     int getInt();
     string getString();
+    Plot* getPlot();
 
 private:
     ifstream* fichier;

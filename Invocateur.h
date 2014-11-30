@@ -5,13 +5,14 @@ using namespace std;
 
 #include <vector>
 #include <exception>
-
+#include "Plot.h"
 class Invocateur
 {
 
 	public: virtual int getInt() = 0;
 
 	public: virtual string getString() = 0;
+virtual Plot* getPlot() = 0;
 
 	protected:
         string current_line;
