@@ -6,6 +6,7 @@ using namespace std;
 
 #include <vector>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <exception>
 #include <string>
@@ -85,8 +86,10 @@ string Parser::getString() {
     return elems.at(0);
 }
 
+Plot Parser::getPlot(){
+    return Plot(getInt());
+}
 
-Plot* Parser::getPlot() {
-    return new Plot(getInt());
-
+Objet Parser::getObjet(){
+    return Objet(getInt());
 }

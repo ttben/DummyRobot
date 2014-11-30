@@ -36,6 +36,12 @@ class Robot
         Position& GetPosition() {
             return _position;
         }
+        string GetDirection() {
+            return _direction;
+        }
+        Objet GetObjet() {
+            return *_objet;
+        }
 
         void avancer(int x, int y);
         void tourner(string d);
@@ -55,6 +61,7 @@ class Robot
         friend ostream& operator << (ostream& os, const Robot& r)
         {
            os << "Position : " << r._position << ", Etat : " << *(r._etat) << ", Objet : ";
+
            if(r._objet != NULL){os << *(r._objet);}
            else {os << "aucun";}
            os << ", Plot : ";
