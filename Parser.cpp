@@ -1,8 +1,7 @@
 using namespace std;
 
-#include <fstream>
 #include <iostream>
-#include <sstream>
+#include <fstream>
 
 #include <vector>
 #include <stdio.h>
@@ -22,8 +21,10 @@ void Parser::annuler_action(Robot* r) {
 
 
 void Parser::select_file(string file) {
-    this->fichier= new ifstream(file,  std::ifstream::in);
-    if(fichier) {
+    fichier = new ifstream("cmd.txt", ios::in);
+
+    //ifstream in(file);
+    if(&fichier) {
         cout << "Fichier ouvert correctement " << endl;
     }
     else {

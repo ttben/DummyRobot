@@ -10,7 +10,7 @@ using namespace std;
 int main()
 {
 
-    Robot r;
+    /*Robot r;
 
     Afficheur aC = AfficheurColonne(&r);
 
@@ -37,11 +37,9 @@ int main()
     }
     catch (EtatRobot::UnAuthorizedAction e) {
         cout << "\tErreur d'execution attendue, relevee ==> OK" << endl;
-    }
+    }*/
 
 
-
-    /*
     Robot r;
     Afficheur a = AfficheurColonne(&r);
     r.attach(&a);
@@ -50,7 +48,6 @@ int main()
     p.select_file("commandes_sources.txt");
     p.execute_next_action(&r);
     p.annuler_action(&r);
-    */
 
     return 0;
 }
