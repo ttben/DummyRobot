@@ -15,7 +15,6 @@ class Invocateur
 	public: virtual int getInt() = 0;
 
 	public: virtual string getString() = 0;
-virtual Plot* getPlot() = 0;
 
 	public: virtual Plot getPlot() = 0;
 
