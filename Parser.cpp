@@ -17,6 +17,7 @@ using namespace std;
 
 void Parser::annuler_action(Robot* r) {
     commandes_executees.back()->annuler(r);
+    commandes_executees.pop_back();
 }
 
 

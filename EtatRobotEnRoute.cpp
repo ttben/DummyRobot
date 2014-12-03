@@ -10,4 +10,3 @@ EtatRobot* EtatRobotEnRoute::figer() {
     static_cast<EtatRobotFige*> (erf)->setEtatPrecedent(*this);
     return erf;
 }
-

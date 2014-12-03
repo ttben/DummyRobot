@@ -47,6 +47,26 @@ int main()
     Parser p;
     p.select_file("commandes_sources.txt");
     p.execute_next_action(&r);
+    p.execute_next_action(&r);
+    p.execute_next_action(&r);
+    p.execute_next_action(&r);
+    p.execute_next_action(&r);
+    p.execute_next_action(&r);
+    p.execute_next_action(&r);
+    p.annuler_action(&r);
+    p.annuler_action(&r);
+    p.annuler_action(&r);
+    p.annuler_action(&r);
+    p.annuler_action(&r);
+    p.annuler_action(&r);
+    p.annuler_action(&r);
+
+    // ET TA MERE CA MARCHE PAS CE BORDEL A CAUSE DE ETATENROUTE #@%%#@$!
+    p.execute_next_action(&r);
+    p.execute_next_action(&r);
+    p.annuler_action(&r);
+    p.annuler_action(&r);
+    p.execute_next_action(&r);
     p.annuler_action(&r);
 
     return 0;
