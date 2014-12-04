@@ -16,8 +16,15 @@ using namespace std;
 #include "Plot.h"
 
 void Parser::annuler_action(Robot* r) {
-    commandes_executees.back()->annuler(r);
-    commandes_executees.pop_back();
+    if(commandePtr == 0) return;
+    commandePtr--;
+    commandes_executees[commandePtr]->annuler(r);
+}
+
+void Parser::refaire_action(Robot* r) {
+    if(commandePtr >= commandes_executees.size())return;
+    commandes_executees[commandePtr]->executer(r);
+    commandePtr++;
 }
 
 
@@ -36,7 +43,11 @@ void Parser::select_file(string file) {
 void Parser::execute_next_action(Robot* r) {
     Commande* c = getCommande();
     if(c->estAnnulable()){
+        while(commandes_executees.size()!=commandePtr){
+            commandes_executees.pop_back();
+        }
         commandes_executees.push_back(c);
+        commandePtr++;
     }
     c->executer(r);
 }

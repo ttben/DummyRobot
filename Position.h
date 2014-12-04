@@ -30,11 +30,6 @@ class Position
             _y = p.getY();
             return *this;
         }
-
-        ~Position(){
-            _x=0;
-            _y=0;
-        }
 };
 
 #endif

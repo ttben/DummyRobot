@@ -23,10 +23,6 @@ class Objet
         _poids = o.getPoids();
         return *this;
     }
-
-    ~Objet(){
-        _poids  = 0;
-    }
 };
 
 #endif

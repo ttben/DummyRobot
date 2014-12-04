@@ -70,15 +70,6 @@ class Robot
 
            return os;
         }
-
-        ~Robot() {
-            delete &_direction;
-            delete &_listObservers;
-            delete &_dernierOrdreRecu;
-            delete &_plot;
-            delete &_objet;
-            delete &_position;
-        }
 };
 
 #endif

@@ -24,10 +24,6 @@ class Plot
         _hauteur = p.getHauteur();
         return *this;
     }
-
-    ~Plot(){
-        _hauteur=0;
-    }
 };
 
 #endif

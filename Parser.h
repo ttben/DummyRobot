@@ -27,6 +27,7 @@ public:
     void select_file(string file);
     void execute_next_action(Robot* r);
     void annuler_action(Robot* r);
+    void refaire_action(Robot* r);
 	Objet getObjet();
 	Commande* getCommande();
     int getInt();
@@ -34,6 +35,7 @@ public:
     Plot getPlot();
 
 private:
+    int commandePtr=0;
     ifstream* fichier;
     vector<Commande*> commandes_executees;
 
