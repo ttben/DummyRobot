@@ -20,9 +20,9 @@ class EtatRobotAVide: public EtatRobotEnRoute
         EtatRobot* tourner();
         EtatRobot* rencontrerPlot();
         static EtatRobot* getInstance();
-        friend ostream& operator << (ostream& os, const EtatRobotAVide& r)
-        {
-           return os << "POUGOBJG";
+
+        string getStateName()const{
+            return "EtatRobotAVide";
         }
 };
 

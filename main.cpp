@@ -58,14 +58,15 @@ int main()
     p.annuler_action(&r);
     p.annuler_action(&r);
     p.annuler_action(&r);
-    p.annuler_action(&r);
+
+    // Macro
+    p.execute_next_action(&r);
+    p.execute_next_action(&r);
     p.annuler_action(&r);
 
-    // ET TA MERE CA MARCHE PAS CE BORDEL A CAUSE DE ETATENROUTE #@%%#@$!
+    // LOL CA PLANTE
     p.execute_next_action(&r);
     p.execute_next_action(&r);
-    p.annuler_action(&r);
-    p.annuler_action(&r);
     p.execute_next_action(&r);
     p.annuler_action(&r);
 

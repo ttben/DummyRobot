@@ -23,7 +23,7 @@ void Robot::tourner(string d) {
     _dernierOrdreRecu = sstm.str();
     _etat = _etat->tourner();
     _direction = d;
-    _plot = NULL;
+    _plot = 0;
     afficher();
 }
 
@@ -39,7 +39,7 @@ void Robot::saisir(Objet o) {
 void Robot::poser() {
     _dernierOrdreRecu = "poser()";
     _etat = _etat->poser();
-    _objet = NULL;
+    _objet = 0;
     afficher();
 }
 
@@ -59,7 +59,7 @@ void Robot::rencontrerPlot(Plot p) {
     afficher();
 }
 
-int Robot::evaluerPlot() {
+int Robot::evaluerPlot(){
     _dernierOrdreRecu = "evaluerPlot()";
     _etat = _etat->evaluerPlot();
     afficher();
@@ -96,7 +96,7 @@ void Robot::attach(Observer* obs)
 
 void Robot::detach(Observer* obs)
 {
-    //_listObservers.erase(remove(_listObservers.begin(), _listObservers.end(), obs), _listObservers.end());
+    //NOPE
 }
 
 string Robot::getDernierOrdre(){

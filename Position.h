@@ -15,14 +15,25 @@ class Position
 	public:
         Position();
 	    Position(int, int);
-	    int getX();
+	    int getX()const;
         void setX(int aX);
-        int getY();
+        int getY()const;
         void setY(int aY);
 
         friend ostream& operator << (ostream& os, const Position& p){
            os << '[' << p._x << ';' << p._y << ']';
            return os;
+        }
+
+        Position& operator=(const Position& p){
+            _x = p.getX();
+            _y = p.getY();
+            return *this;
+        }
+
+        ~Position(){
+            _x=0;
+            _y=0;
         }
 };
 

@@ -13,15 +13,19 @@ class EtatRobotFige;
 
 class EtatRobotFige: public EtatRobot
 {
-	private: EtatRobotEnRoute _etatPrecedent;
+	private: EtatRobotEnRoute* _etatPrecedent;
 
 	public: EtatRobot* repartir();
 
-	public: void setEtatPrecedent(EtatRobotEnRoute aEtatPrecedent);
+	public: void setEtatPrecedent(EtatRobotEnRoute *aEtatPrecedent);
 
 	public: static EtatRobot* getInstance();
 
 	private: EtatRobotFige();
+
+	string getStateName()const{
+            return "EtatRobotFige";
+    }
 };
 
 #endif

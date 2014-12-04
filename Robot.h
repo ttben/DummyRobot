@@ -29,8 +29,8 @@ class Robot
 	    Robot() {
             _etat = (EtatRobotAVide::getInstance());
             _position = Position(0,0);
-            _plot = NULL;
-            _objet = NULL;
+            _plot = 0;
+            _objet = 0;
         }
 
         Position& GetPosition() {
@@ -69,6 +69,15 @@ class Robot
            else{os << "aucun";}
 
            return os;
+        }
+
+        ~Robot() {
+            delete &_direction;
+            delete &_listObservers;
+            delete &_dernierOrdreRecu;
+            delete &_plot;
+            delete &_objet;
+            delete &_position;
         }
 };
 

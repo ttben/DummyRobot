@@ -28,6 +28,7 @@ public:
     void execute_next_action(Robot* r);
     void annuler_action(Robot* r);
 	Objet getObjet();
+	Commande* getCommande();
     int getInt();
     string getString();
     Plot getPlot();

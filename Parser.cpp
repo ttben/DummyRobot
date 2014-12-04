@@ -34,13 +34,10 @@ void Parser::select_file(string file) {
 }
 
 void Parser::execute_next_action(Robot* r) {
-    string contenu;
-    getline(*fichier, contenu);
-    this->current_line = contenu;
-    string nomCommande = getNomCommande(contenu);
-    cout << "COMMANDE TROUVEE :: " << nomCommande << endl;
-    Commande* c = Commande::nouvelleCommande(nomCommande, *this);
-    commandes_executees.push_back(c);
+    Commande* c = getCommande();
+    if(c->estAnnulable()){
+        commandes_executees.push_back(c);
+    }
     c->executer(r);
 }
 
@@ -74,7 +71,6 @@ void Parser::updateString(vector<string> elems) {
 
 int Parser::getInt() {
     vector<string> elems;
-    cout << "CURRENT LINE:" << current_line << endl;
     elems = split(current_line, " ");
     int i = atoi(elems.at(0).c_str());
     updateString(elems);
@@ -94,4 +90,12 @@ Plot Parser::getPlot(){
 
 Objet Parser::getObjet(){
     return Objet(getInt());
+}
+
+Commande* Parser::getCommande(){
+    string contenu;
+    getline(*fichier, contenu);
+    this->current_line = contenu;
+    string nomCommande = getNomCommande(contenu);
+    return Commande::nouvelleCommande(nomCommande, this);
 }

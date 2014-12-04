@@ -7,24 +7,19 @@ using namespace std;
 
 #include "Commande.h"
 
-class CommandeAvancer: public Commande
+class CommandeDefMacro: public Commande
 {
     public:
-        static CommandeAvancer monExemplaire;
+        static CommandeDefMacro monExemplaire;
 
     private :
-        int _x;
-        int _y;
 
-        int _oldX;
-        int _oldY;
-
-        CommandeAvancer(int x, int y);
+        CommandeDefMacro(string nom, vector<Commande*> commandes);
 
 
     public:
-        CommandeAvancer() : Commande() {};
-        CommandeAvancer(string nom);
+        CommandeDefMacro() : Commande() {};
+        CommandeDefMacro(string nom);
         Commande* virtualConstructor(Parser* p);
 
         void executer(Robot* r);

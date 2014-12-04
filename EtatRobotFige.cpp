@@ -9,10 +9,10 @@ EtatRobotFige::EtatRobotFige() {
 }
 
 EtatRobot* EtatRobotFige::repartir() {
-	return &_etatPrecedent;
+	return _etatPrecedent;
 }
 
-void EtatRobotFige::setEtatPrecedent(EtatRobotEnRoute aEtatPrecedent) {
+void EtatRobotFige::setEtatPrecedent(EtatRobotEnRoute *aEtatPrecedent) {
 	_etatPrecedent = aEtatPrecedent;
 }
 

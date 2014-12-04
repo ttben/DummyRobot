@@ -13,8 +13,7 @@ CommandeFiger::CommandeFiger(string nom) {
     Commande::commandesInscrites()[nom] = this;
 }
 
-Commande* CommandeFiger::virtualConstructor(Parser p) {
-    cout << "ON A DEMANDE DE CONSTRUIRE UN FIGER ()" << endl;
+Commande* CommandeFiger::virtualConstructor(Parser* p) {
     return new CommandeFiger();
 }
 
@@ -25,7 +24,7 @@ void CommandeFiger::executer(Robot* r) {
 }
 
 void CommandeFiger::annuler(Robot* r) {
-    cout << "ANNULATION DE FIGER()" << endl;
+    cout << "ANNULATION DE FIGER" << endl;
     r->repartir();
 }
 

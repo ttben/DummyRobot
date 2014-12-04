@@ -23,7 +23,7 @@ class CommandeTourner: public Commande
     public:
         CommandeTourner() : Commande() {};
         CommandeTourner(string nom);
-        Commande* virtualConstructor(Parser p);
+        Commande* virtualConstructor(Parser* p);
 
         void executer(Robot* r);
         void annuler(Robot* r);

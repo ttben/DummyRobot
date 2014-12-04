@@ -13,8 +13,7 @@ CommandeRepartir::CommandeRepartir(string nom) {
     Commande::commandesInscrites()[nom] = this;
 }
 
-Commande* CommandeRepartir::virtualConstructor(Parser p) {
-    cout << "ON A DEMANDE DE CONSTRUIRE UN REPARTIR ()" << endl;
+Commande* CommandeRepartir::virtualConstructor(Parser* p) {
     return new CommandeRepartir();
 }
 

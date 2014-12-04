@@ -9,7 +9,7 @@ Plot::Plot(int hauteur){
     _hauteur = hauteur;
 }
 
-int Plot::getHauteur() {
+int Plot::getHauteur() const{
 	return this->_hauteur;
 }
 

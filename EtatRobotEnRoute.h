@@ -21,9 +21,8 @@ class EtatRobotEnRoute: public EtatRobot
             throw EtatRobot::UnAuthorizedAction();
         }
 
-        friend ostream& operator << (ostream& os, const EtatRobotEnRoute& r)
-        {
-           return os << "pouet";
+        string getStateName()const{
+            return "EtatRobotEnRoute";
         }
 };
 

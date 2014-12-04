@@ -13,8 +13,7 @@ CommandePeser::CommandePeser(string nom) {
     Commande::commandesInscrites()[nom] = this;
 }
 
-Commande* CommandePeser::virtualConstructor(Parser p) {
-    cout << "ON A DEMANDE DE CONSTRUIRE UN PESER ()" << endl;
+Commande* CommandePeser::virtualConstructor(Parser* p) {
     return new CommandePeser();
 }
 

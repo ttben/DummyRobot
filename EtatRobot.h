@@ -53,12 +53,16 @@ class EtatRobot
             throw UnAuthorizedAction();
         }
 
+        virtual string getStateName()const{
+            return "EtatRobot";
+        }
+
         EtatRobot& operator= (const EtatRobot&) {}
 
-        friend ostream& operator << (ostream& os, const EtatRobot& r)
-        {
-           return os << "caca";
-        }
+        friend ostream& operator << (ostream& os, const EtatRobot& e){
+            os << e.getStateName();
+        return os;
+    }
 };
 
 #endif

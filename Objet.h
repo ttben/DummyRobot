@@ -13,11 +13,19 @@ class Objet
 	public:
 	Objet();
 	Objet(int poids);
-	int getPoids();
+	int getPoids() const;
 
 	friend ostream& operator << (ostream& os, const Objet& o){
         os << "poids=" << o._poids;
         return os;
+    }
+    Objet& operator=(const Objet& o){
+        _poids = o.getPoids();
+        return *this;
+    }
+
+    ~Objet(){
+        _poids  = 0;
     }
 };
 

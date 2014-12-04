@@ -17,15 +17,13 @@ CommandeSaisir::CommandeSaisir(Objet o) {
     this->_objet = o;
 }
 
-Commande* CommandeSaisir::virtualConstructor(Parser p) {
-    _objet = p.getObjet();
-
-    cout << "ON A DEMANDE DE CONSTRUIRE UN SAISIR (" << _objet << ")" << endl;
+Commande* CommandeSaisir::virtualConstructor(Parser* p) {
+    _objet = p->getObjet();
     return new CommandeSaisir(_objet);
 }
 
 void CommandeSaisir::executer(Robot* r) {
-    cout << "EXECUTION DE SAISIR " << _objet << endl;
+    cout << "EXECUTION DE SAISIR(" << _objet << ")" << endl;
     r->saisir(_objet);
     //Commande::commandes_executees.push_back(this);
 }

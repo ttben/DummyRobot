@@ -25,6 +25,10 @@ class EtatRobotEnCharge: public EtatRobotEnRoute
 	public: static EtatRobot* getInstance();
 
 	private: EtatRobotEnCharge();
+
+	string getStateName()const{
+            return "EtatRobotEnCharge";
+    }
 };
 
 #endif

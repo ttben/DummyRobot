@@ -7,6 +7,7 @@ using namespace std;
 #include "Parser.h"
 #include "Robot.h"
 
+map<string, vector<Commande*> > Commande::macroCommandes;
 CommandeTourner CommandeTourner::monExemplaire("TOURNER");
 
 CommandeTourner::CommandeTourner(string nom) {
@@ -22,16 +23,14 @@ CommandeTourner::CommandeTourner(string d, bool inscrire) {
 
 }
 
-Commande* CommandeTourner::virtualConstructor(Parser p) {
-    _d = p.getString();
-
-    cout << "ON A DEMANDE DE CONSTRUIRE UN TOURNER (" << _d << ")" << endl;
-    return new CommandeTourner(_d);
+Commande* CommandeTourner::virtualConstructor(Parser* p) {
+    _d = p->getString();
+    return new CommandeTourner(_d, false);
 }
 
 void CommandeTourner::executer(Robot* r) {
     _old_d = r->GetDirection();
-    cout << "EXECUTION DE TOURNER " << _d << endl;
+    cout << "EXECUTION DE TOURNER(" << _d << ")" << endl;
     r->tourner(_d);
     //Commande::commandes_executees.push_back(this);
 }

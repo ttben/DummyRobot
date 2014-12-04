@@ -15,7 +15,7 @@ class CommandeEvaluer: public Commande
     public:
         CommandeEvaluer() : Commande() {};
         CommandeEvaluer(string nom);
-        Commande* virtualConstructor(Parser p);
+        Commande* virtualConstructor(Parser* p);
 
         void executer(Robot* r);
         void annuler(Robot* r);

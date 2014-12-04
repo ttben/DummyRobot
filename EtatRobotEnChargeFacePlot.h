@@ -22,6 +22,10 @@ class EtatRobotEnChargeFacePlot: public EtatRobotEnRoute
 	public: static EtatRobot* getInstance();
 
 	private: EtatRobotEnChargeFacePlot();
+
+	string getStateName()const{
+            return "EtatRobotEnChargeFacePlot";
+    }
 };
 
 #endif

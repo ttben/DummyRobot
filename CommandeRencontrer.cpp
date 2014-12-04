@@ -17,15 +17,14 @@ CommandeRencontrer::CommandeRencontrer(Plot p) {
     this->_plot = p;
 }
 
-Commande* CommandeRencontrer::virtualConstructor(Parser p) {
-    _plot = p.getPlot();
+Commande* CommandeRencontrer::virtualConstructor(Parser* p) {
+    _plot = p->getPlot();
 
-    cout << "ON A DEMANDE DE CONSTRUIRE UN RENCONTRER (" << _plot << ")" << endl;
     return new CommandeRencontrer(_plot);
 }
 
 void CommandeRencontrer::executer(Robot* r) {
-    cout << "EXECUTION DE RENCONTRER" << _plot << endl;
+    cout << "EXECUTION DE RENCONTRER(" << _plot << ")" << endl;
     r->rencontrerPlot(_plot);
     //Commande::commandes_executees.push_back(this);
 }

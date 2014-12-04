@@ -18,6 +18,10 @@ public:
 	    EtatRobot* evaluerPlot();
 	    static EtatRobot* getInstance();
 
+	    string getStateName()const{
+            return "EtatRobotAVideFacePlot";
+        }
+
 };
 
 #endif

@@ -13,11 +13,20 @@ class Plot
 	public:
     Plot();
     Plot(int hauteur);
-    int getHauteur();
+    int getHauteur() const;
 
     friend ostream& operator << (ostream& os, const Plot& p){
         os << "hauteur=" << p._hauteur;
         return os;
+    }
+
+    Plot& operator=(const Plot& p){
+        _hauteur = p.getHauteur();
+        return *this;
+    }
+
+    ~Plot(){
+        _hauteur=0;
     }
 };
 

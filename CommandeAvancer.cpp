@@ -18,11 +18,9 @@ CommandeAvancer::CommandeAvancer(int x, int y) {
     this->_y = y;
 }
 
-Commande* CommandeAvancer::virtualConstructor(Parser p) {
-    _x = p.getInt();
-    _y = p.getInt();
-
-    cout << "ON A DEMANDE DE CONSTRUIRE UN AVANCER (" << _x << "," << _y << ")" << endl;
+Commande* CommandeAvancer::virtualConstructor(Parser* p) {
+    _x = p->getInt();
+    _y = p->getInt();
     return new CommandeAvancer(_x, _y);
 }
 

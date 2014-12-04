@@ -15,7 +15,7 @@ class CommandePeser: public Commande
     public:
         CommandePeser() : Commande() {};
         CommandePeser(string nom);
-        Commande* virtualConstructor(Parser p);
+        Commande* virtualConstructor(Parser* p);
 
         void executer(Robot* r);
         void annuler(Robot* r);

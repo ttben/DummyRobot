@@ -13,8 +13,7 @@ CommandeEvaluer::CommandeEvaluer(string nom) {
     Commande::commandesInscrites()[nom] = this;
 }
 
-Commande* CommandeEvaluer::virtualConstructor(Parser p) {
-    cout << "ON A DEMANDE DE CONSTRUIRE UN EVALUER ()" << endl;
+Commande* CommandeEvaluer::virtualConstructor(Parser* p) {
     return new CommandeEvaluer();
 }
 

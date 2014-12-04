@@ -9,7 +9,7 @@ Objet::Objet(int poids){
     _poids = poids;
 }
 
-int Objet::getPoids() {
+int Objet::getPoids() const{
 	return _poids;
 }
 

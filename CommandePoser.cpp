@@ -13,8 +13,7 @@ CommandePoser::CommandePoser(string nom) {
     Commande::commandesInscrites()[nom] = this;
 }
 
-Commande* CommandePoser::virtualConstructor(Parser p) {
-    cout << "ON A DEMANDE DE CONSTRUIRE UN POSER ()" << endl;
+Commande* CommandePoser::virtualConstructor(Parser* p) {
     return new CommandePoser();
 }
 
@@ -26,7 +25,7 @@ void CommandePoser::executer(Robot* r) {
 }
 
 void CommandePoser::annuler(Robot* r) {
-    cout << "ANNULATION DE POSER() RETOUR A (" << _old_objet << ")" << endl;
+    cout << "ANNULATION DE POSER RETOUR A (" << _old_objet << ")" << endl;
     r->saisir(_old_objet);
 }
 

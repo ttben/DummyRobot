@@ -7,8 +7,10 @@ using namespace std;
 #include <exception>
 
 #include "Objet.h"
+#include "Commande.h"
 #include "Plot.h"
 
+class Commande;
 class Invocateur
 {
 
@@ -19,6 +21,8 @@ class Invocateur
 	public: virtual Plot getPlot() = 0;
 
 	public: virtual Objet getObjet() = 0;
+
+	public: virtual Commande* getCommande() = 0;
 
 	protected:
         string current_line;
