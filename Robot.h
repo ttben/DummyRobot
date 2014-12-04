@@ -39,8 +39,11 @@ class Robot
         string GetDirection() {
             return _direction;
         }
-        Objet GetObjet() {
-            return *_objet;
+        Objet* GetObjet() {
+            return _objet;
+        }
+        Plot* GetPlot() {
+            return _plot;
         }
 
         void avancer(int x, int y);

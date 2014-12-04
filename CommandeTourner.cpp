@@ -30,6 +30,7 @@ Commande* CommandeTourner::virtualConstructor(Parser* p) {
 
 void CommandeTourner::executer(Robot* r) {
     _old_d = r->GetDirection();
+    _old_p = r->GetPlot();
     cout << "EXECUTION DE TOURNER(" << _d << ")" << endl;
     r->tourner(_d);
     //Commande::commandes_executees.push_back(this);
@@ -38,6 +39,8 @@ void CommandeTourner::executer(Robot* r) {
 void CommandeTourner::annuler(Robot* r) {
     cout << "ANNULATION DE TOURNER(" << _d << ") RETOUR A (" << _old_d << ")" << endl;
     r->tourner(_d);
+    if(_old_p)
+    r->rencontrerPlot(*_old_p);
 }
 
 bool CommandeTourner::estAnnulable() {

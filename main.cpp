@@ -53,22 +53,24 @@ int main()
     p.execute_next_action(&r);
     p.execute_next_action(&r);
     p.execute_next_action(&r);
-    p.annuler_action(&r);
-    p.annuler_action(&r);
-    p.annuler_action(&r);
-    p.annuler_action(&r);
-    p.annuler_action(&r);
+    p.execute_next_action(&r);
+    p.execute_next_action(&r);
+    p.execute_next_action(&r);
+    p.execute_next_action(&r);
+    p.execute_next_action(&r);
+    p.execute_next_action(&r);
+    p.execute_next_action(&r);
 
     // Macro
     p.execute_next_action(&r);
     p.execute_next_action(&r);
-    p.annuler_action(&r);
+    p.execute_next_action(&r);
 
     // LOL CA PLANTE
     p.execute_next_action(&r);
     p.execute_next_action(&r);
     p.execute_next_action(&r);
-    p.annuler_action(&r);
+    p.execute_next_action(&r);
 
     return 0;
 }

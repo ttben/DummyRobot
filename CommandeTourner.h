@@ -17,6 +17,8 @@ class CommandeTourner: public Commande
 
         string _old_d;
 
+        Plot* _old_p;
+
         CommandeTourner(string d, bool inscrire);
 
 

@@ -26,7 +26,7 @@ void CommandePoser::executer(Robot* r) {
 
 void CommandePoser::annuler(Robot* r) {
     cout << "ANNULATION DE POSER RETOUR A (" << _old_objet << ")" << endl;
-    r->saisir(_old_objet);
+    r->saisir(*_old_objet);
 }
 
 bool CommandePoser::estAnnulable() {

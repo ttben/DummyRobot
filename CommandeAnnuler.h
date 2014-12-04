@@ -2,23 +2,25 @@
 #include <string>
 using namespace std;
 
-#ifndef __CommandePoser_h__
-#define __CommandePoser_h__
+#ifndef __CommandeAnnuler_h__
+#define __CommandeAnnuler_h__
 
 #include "Commande.h"
 
-class CommandePoser: public Commande
+class CommandeAnnuler: public Commande
 {
     public:
-        static CommandePoser monExemplaire;
+        static CommandeAnnuler monExemplaire;
 
     private :
-        Objet* _old_objet;
+        Parser *_p;
+
+        CommandeAnnuler(Parser *p);
 
 
     public:
-        CommandePoser() : Commande() {};
-        CommandePoser(string nom);
+        CommandeAnnuler() : Commande() {};
+        CommandeAnnuler(string nom);
         Commande* virtualConstructor(Parser* p);
 
         void executer(Robot* r);
